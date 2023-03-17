@@ -6,13 +6,10 @@ layout: default
     <img src="/images/photo.png" alt="" />
     <p>{{ site.description }} </p>
     <p id="bio-social">
-        <a href="mailto:idilsulo@gmail.com">Email</a> / 
-        <a href="https://raw.githubusercontent.com/idilsulo/idilsulo.github.io/master/docs/Idil_Sulo_CV_Resume.pdf">CV</a> / 
-        <a href="https://github.com/idilsulo">GitHub</a> / 
-        <a href="https://www.twitter.com/codingwoman">Twitter</a> / 
-        <a rel="me" href="https://sigmoid.social/@idil">Mastodon</a> / 
-        <a href="https://www.linkedin.com/in/idilsulo/en/">LinkedIn</a> / 
-        <a href="https://scholar.google.com/citations?user=_WKcP38AAAAJ&hl=en">Scholar</a>
+        <a href="mailto:harry.anthony@eng.ox.ac.uk">Email</a> / 
+        <a href="https://github.com/HarryAnthony">GitHub</a> / 
+        <a href="https://www.twitter.com/HarryEJAnthony">Twitter</a> / 
+        <a href="https://www.linkedin.com/in/harry-a-859b1a107/">LinkedIn</a> / 
     </p>
     
 </div>
@@ -22,27 +19,3 @@ layout: default
 </div>
 
 
-<div class="publications-wrapper">
-    <h2>Research</h2>
-    {% for post in site.posts %}
-        <div class="post-info">
-            <img src="{{ post.image }}" alt="" />
-            <div class="post-title">
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                <p> {{ post.authors }} </p>
-                <p class="post-place"> {{ post.place }} </p>
-                <div class="post-paper">
-                    {% if post.paper %}   
-                        <a href="{{ post.paper | prepend: site.baseurl }}">[paper]</a>
-                    {% endif %}
-                    {% if post.arxiv %} 
-                        <a href="{{ post.arxiv | prepend: site.baseurl }}">[arxiv]</a>
-                    {% endif %}
-                    {% if post.code %} 
-                        <a href="{{ post.code | prepend: site.baseurl }}">[code]</a>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    {% endfor %}
-</div>
