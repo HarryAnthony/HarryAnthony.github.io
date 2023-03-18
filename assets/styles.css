@@ -1,5 +1,5 @@
 @font-face{
-    font-family: Harlow;
+    font-family: 'Harlow';
     src: url(Harlow.ttf); 
 }
 
@@ -115,7 +115,7 @@ body {
     left: 32px;
 }
 
-.site-title { font-size: 26px; font-weight: 300; line-height: 54px; letter-spacing: 0px; margin-bottom: 0; float: left; margin-left: 5px;}
+.site-title { font-family: 'Harlow',sans-serif; font-size: 26px; font-weight: 300; line-height: 54px; letter-spacing: 0px; margin-bottom: 0; float: left; margin-left: 5px;}
 
 
 /* DARK MODE */
