@@ -21,7 +21,7 @@
 title: Harry Anthony
 email: Harry.Anthony@eng.ox.ac.uk
 description: >- # this means to ignore newlines until "baseurl:"
-  Placeholder
+  Hello world! My name is Harry Anthony and I am a DPhil student at the University of Oxford. I work with the IBME group on improving the  reliability of deep neural networks in the field of medical imaging. My area of research is Out-of-distribution (OOD) detection, developing methods for deep learning algorithms to detect when input data differs from its training data. Previously, I obtained a master's degree in Physics from Imperial College London.
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Harry Anthony
 github_username:  HarryAnthony
