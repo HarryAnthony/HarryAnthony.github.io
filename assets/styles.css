@@ -126,7 +126,7 @@ body {
 
 
 .darkmode body {
-    font: 200 16px/1.5 -apple-system, BlinkMacSystemFont, "Harlow","Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+    font: 200 16px/1.5 -apple-system, "Harlow",BlinkMacSystemFont,"Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
     color: #cccccc; 
     background-color: #171718; -webkit-text-size-adjust: 100%; 
     -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; 
