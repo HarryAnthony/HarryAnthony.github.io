@@ -1,3 +1,8 @@
+@font-face{
+    font-family: Harlow;
+    src: url(Harlow.ttf); 
+}
+
 body {
     font: 200 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
     -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; 
@@ -90,7 +95,7 @@ body {
     left: 2px;
     top: 2px;
     border-radius: 50%;
-    font: 15px/28px Helvetica;
+    font: 15px/28px Harlow;
     text-transform: uppercase;
     font-weight: bold;
     text-indent: -22px;
