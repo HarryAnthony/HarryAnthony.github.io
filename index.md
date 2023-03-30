@@ -6,14 +6,9 @@ title: Home
 layout: home
 ---
 
-## News
+## Updates
 
-Placeholder
+[Oct. 2022] Began studying for a DPhil in Engeering Science at the University of Oxford.
+[Oct. 2022] Graduated with a First Class Physics degree from Imperial College London.
+[Apr. 2022] Completed a masters of thesis on the search for axions at the LHCb.
 
-[Jan. 2023] Our work titled Learning Vision Based Autonomous Lateral Vehicle Control without Supervision had been accepted to Applied Intelligence. <br/>
-[Dec. 2022] We received our certificates for our participation to
-
-
-## On-going Projects 
-* Master's Thesis: Zero-shot point cloud classification with VLM embeddings
-* Fusion of multi-sensor data for robust vehicle control
