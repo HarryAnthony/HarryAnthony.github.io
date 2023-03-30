@@ -14,5 +14,6 @@ layout: home
 
 [Apr. 2022] Completed a masters of thesis on the search for axions at the LHCb.
 
-
-<img src="images/logo.jpg" alt="Logo of Oxford University">
+<a href=https://ibme.ox.ac.uk/>
+<img src="images/logo.jpg" alt="Logo of Oxford University" style="width:42px;height:42px;">
+</a>
