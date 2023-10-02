@@ -7,10 +7,9 @@ layout: default
   <h1>Research / <a href="https://scholar.google.com/citations?user=_WKcP38AAAAJ&hl=en">Google Scholar</a></h1>
  
   <!-- Iterate through papers data -->
-  {% for paper in site.data.papers %}
+  {% for paper in site.data.papers.yml %}
   <div class="paper">
     <h2>{{ paper.title }}</h2>
-    <img src="{{ paper.image }}" alt="{{ paper.title }}">
     <p>{{ paper.description }}</p>
     
     <!-- Button to access the paper (opens in a new tab) -->
