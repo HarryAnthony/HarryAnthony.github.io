@@ -4,6 +4,21 @@ layout: default
 
 <div class="publications-wrapper">
     <h1>Research / <a href="https://scholar.google.com/citations?user=_WKcP38AAAAJ&hl=en">Google Scholar</a></h1>
+ 
+  <!-- Iterate through papers data -->
+  {% for paper in site.data.papers %}
+  <div class="paper">
+    <h2>{{ paper.title }}</h2>
+    <img src="{{ paper.image }}" alt="{{ paper.title }}">
+    <p>{{ paper.description }}</p>
     
+    <!-- Button to access the paper (opens in a new tab) -->
+    <a href="{{ paper.paper_url }}" class="button" target="_blank">Access Paper</a>
+    
+    <!-- Button to access the code (opens in a new tab) -->
+    <a href="{{ paper.code_url }}" class="button" target="_blank">Access Code</a>
+  </div>
+  {% endfor %}
+   
  
 </div>
