@@ -4,14 +4,14 @@ title:  "On the use of Mahalanobis distance for out-of-distribution detection wi
 place: UNSURE at MICCAI, Springer, 2023
 authors: Harry Anthony & Konstantinos Kamnitsas
 date:   2023-08-01 12:00:00 +0200
-image: /images/on_the_use_of_Mahalanobis.png
+image: /images/On_the_use_of_Mahalanobis.png
 categories: out-of-distribution-detection, outlier-detection
 paper: https://arxiv.org/abs/2309.01488
 arxiv:
 code: https://github.com/HarryAnthony/Mahalanobis-OOD-detection
 ---
 
-![](/images/on_the_use_of_Mahalanobis.png)
+![](/images/On_the_use_of_Mahalanobis.png)
 
 
 ## Abstract
