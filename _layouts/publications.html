@@ -14,11 +14,14 @@ function renderPosts(checkbox_checked) {
 
         if (checkbox_checked) {
             if (isTrue) {
+                post.style.visibility = "hidden";
                 post.style.display = "none";
             } else {
-                post.style.display = "block";
+                 post.style.visibility = "visible";
+                 post.style.display = "block";
             }
         } else {
+            post.style.visibility = "visible";
             post.style.display = "block";
         }
     }
