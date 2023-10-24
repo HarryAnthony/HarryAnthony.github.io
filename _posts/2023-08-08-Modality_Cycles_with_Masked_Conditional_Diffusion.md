@@ -9,7 +9,7 @@ categories: out-of-distribution-detection, outlier-detection
 paper: https://arxiv.org/abs/2308.16150
 arxiv:
 code: https://github.com/ZiyunLiang/MMCCD
-poster: 
+poster: /docs/MICCAI_Conference_poster_Ziyun_Liang_2023.jpg
 comments:
 year: 2023 
 ---
