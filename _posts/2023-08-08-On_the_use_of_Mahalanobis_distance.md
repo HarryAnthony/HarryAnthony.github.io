@@ -1,6 +1,5 @@
 ---
 layout: post
-first_author_bool: true
 title: "On the use of Mahalanobis distance for out-of-distribution detection with neural networks for medical imaging"
 place: UNSURE at MICCAI 2023
 authors: Harry Anthony & Konstantinos Kamnitsas
@@ -10,7 +9,7 @@ categories: out-of-distribution-detection, outlier-detection
 paper: https://link.springer.com/chapter/10.1007/978-3-031-44336-7_14
 arxiv:
 code: https://github.com/HarryAnthony/Mahalanobis-OOD-detection
-poster: 
+poster: /images/On_the_use_of_Mahalanobis.png
 comments: Best Paper Award at UNSURE 2023
 year: 2023
 ---
