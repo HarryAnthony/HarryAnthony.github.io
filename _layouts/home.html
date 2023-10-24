@@ -20,7 +20,6 @@ layout: default
     {{content}}
 </div>
 
-## Spotlight Research
 
 <script>
 function renderPosts(checkbox_checked) {
@@ -64,6 +63,7 @@ function renderPosts(checkbox_checked) {
 <button class="rounded-button first-author-button" onclick="toggleButton('first')">First Author</button>
 <button class="rounded-button contributor-button" onclick="toggleButton('contributor')">Contributor</button>
 
+<h2>Spotlight Research</h2>
 
 <div class="publications-wrapper">
     {% for post in site.posts %}
@@ -108,7 +108,6 @@ function renderPosts(checkbox_checked) {
 </div>
 
 
-
 <style>
     .rounded-button {
         border: none;
@@ -131,6 +130,4 @@ function renderPosts(checkbox_checked) {
     }
 </style>
 
-<a href='https://ibme.ox.ac.uk/'>
-	<img src="images/logo.jpg" alt="Logo of Oxford University" style="width:300px;height:100px;">
-</a>
+<a href='https://ibme.ox.ac.uk/'> <img src="images/logo.jpg" alt="Logo of Oxford University" style="width:300px;height:100px;"></a>
