@@ -13,7 +13,7 @@ layout: default
                 <p> {{ post.authors }} </p>
                 <p class="post-place"> {{ post.place }} </p>
                 {% if post.comments %}   
-                    <p class="post-comments" style="display: flex; align-items: center;"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23666666'%20height='16'%20width='16'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M20%203h-4.18C15.4%201.84%2014.3%201%2013%201s-2.4.84-2.82%202H4c-.55%200-1%20.45-1%201v2c0%201.38%201.12%202.5%202.5%202.5h.5v11c0%201.1.9%202%202%202h8c1.1%200%202-.9%202-2V9.5h.5c1.38%200%202.5-1.12%202.5-2.5v-2c0-.55-.45-1-1-1zM12%205c.83%200%201.5.67%201.5%201.5S12.83%208%2012%208s-1.5-.67-1.5-1.5S11.17%205%2012%205zM6%206h2v2H6V6zm4%200h2v2h-2V6zm4%200h2v2h-2V6zm-7%2010c0-.55.45-1%201-1h8c.55%200%201%20.45%201%201v6H7v-6z'%3E%3C%2Fpath%3E%3C%2Fsvg%3E" width="16" height="16"> {{ post.comments }} </p>
+                    <p class="post-comments" style="display: flex; align-items: center;">&#x1F3C6; {{ post.comments }} </p>
                 {% else %}
                     <p class="post-comments"></p>
                 {% endif %}
