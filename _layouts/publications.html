@@ -2,52 +2,7 @@
 layout: default
 ---
 
-<h1>Research / <a href="https://scholar.google.com/citations?hl=en&user=Qml3h9gAAAAJ">Google Scholar</a></h1>
-
-<div class="slider">
-  <label class="switch">
-    <input type="checkbox" id="authorToggle" onclick="toggleAuthorFilter()">
-    <span class="slider round"></span>
-  </label>
-  <span id="sliderText">Contribution</span>
-</div>
-
-
-<script>
-function toggleAuthorFilter() {
-    var checkBox = document.getElementById("authorToggle");
-    var sliderText = document.getElementById("sliderText");
-
-    if (checkBox.checked) {
-        checkbox_checked = true;
-    } else {
-        checkbox_checked = false;
-    }
-
-    renderPosts(checkbox_checked);
-}
-
-function renderPosts(checkbox_checked) {
-    var posts = document.getElementsByClassName("post-info");
-
-    for (var i = 0; i < posts.length; i++) {
-        var post = posts[i];
-        var isTrue = post.innerText.includes(", Harry Anthony");
-
-        if (checkbox_checked) {
-            if (isTrue) {
-                post.style.visibility = "hidden";
-            } else {
-                post.style.visibility = "visible";
-            }
-        } else {
-            post.style.visibility = "visible";
-        }
-    }
-}
-</script>
-
-
+<h1>Research - <a href="https://scholar.google.com/citations?hl=en&user=Qml3h9gAAAAJ">Google Scholar</a></h1>
 
 <script>
   function toggleButton(buttonType) {
