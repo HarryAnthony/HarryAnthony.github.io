@@ -13,7 +13,7 @@ layout: default
                 <p> {{ post.authors }} </p>
                 <p class="post-place"> {{ post.place }} </p>
                 {% if post.comments %}   
-                    <p class="post-comments"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23666666' height='16' viewBox='0 0 24 24' width='16'><path d='M0 0h24v24H0z' fill='none'/><path d='M12 2a9 9 0 1 0 9 9 9.01 9.01 0 0 0-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z'/></svg> {{ post.comments }} </p>
+                    <p class="post-comments"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23666666'%20height='16'%20viewBox='0%200%2024%2024'%20width='16'%3E%3Cpath%20d='M0%200h24v24H0z'%20fill='none'%2F%3E%3Cpath%20d='M12%202a9%209%200%201%200%209%209%209.01%209.01%200%200%200-9-9zm0%2016c-3.87%200-7-3.13-7-7s3.13-7%207-7%207%203.13%207%207-3.13%207-7%207z'%2F%3E%3C%2Fsvg%3E"> {{ post.comments }} </p>
                 {% else %}
                     <p class="post-comments"></p>
                 {% endif %}
