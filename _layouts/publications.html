@@ -55,13 +55,11 @@ function renderPosts(checkbox_checked) {
     var contributorButton = document.querySelector('.contributor-button');
 
     if (buttonType === 'first') {
-      firstAuthorButton.style.backgroundColor : #639f95;
-      contributorButton.style.backgroundColor : #babfbe;
-      toggleAuthorFilter();
+      firstAuthorButton.style.backgroundColor = #639f95;
+      contributorButton.style.backgroundColor = 'grey';
     } else if (buttonType === 'contributor') {
-      firstAuthorButton.style.backgroundColor : #babfbe;
-      contributorButton.style.backgroundColor : #639f95;
-      toggleAuthorFilter();
+      firstAuthorButton.style.backgroundColor = 'grey';
+      contributorButton.style.backgroundColor = #639f95;
     }
   }
 </script>
