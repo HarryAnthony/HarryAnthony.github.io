@@ -58,6 +58,10 @@ a {
     color: #639f95;
 }
 
+a:visited {
+    color: #639f95;
+}
+
 
 .site-header { border-top: 5px solid #639f95; }
 
