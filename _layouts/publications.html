@@ -14,16 +14,32 @@ layout: default
                 <p class="post-place"> {{ post.place }} </p>
                 <div class="post-paper">
                     {% if post.paper %}   
-                        <a href="{{ post.paper | prepend: site.baseurl }}">[paper]</a>
+                        <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
                     {% endif %}
                     {% if post.arxiv %} 
-                        <a href="{{ post.arxiv | prepend: site.baseurl }}">[arxiv]</a>
+                        <a href="{{ post.arxiv | prepend: site.baseurl }}"><button class="rounded-button" type="button">Arxiv</button></a>
                     {% endif %}
                     {% if post.code %} 
-                        <a href="{{ post.code | prepend: site.baseurl }}">[code]</a>
+                        <a href="{{ post.code | prepend: site.baseurl }}"><button class="rounded-button" type="button">Code</button></a>
                     {% endif %}
                 </div>
             </div>
         </div>
     {% endfor %}
 </div>
+
+<style>
+    .rounded-button {
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        background-color: #639f95;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
