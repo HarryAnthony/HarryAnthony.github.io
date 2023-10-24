@@ -54,6 +54,10 @@ body {
 
 .post-place { font-style: italic; }
 
+a {
+    color: #639f95;
+}
+
 
 .site-header { border-top: 5px solid #639f95; }
 
