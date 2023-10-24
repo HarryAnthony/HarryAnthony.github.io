@@ -54,10 +54,21 @@ function renderPosts(checkbox_checked) {
             <img src="{{ post.image }}" alt="" />
             <div class="post-title">
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                <p> {{ post.authors }} </p>
+                <p> 
+                    {% if post.authors contains 'Harry Anthony' %}
+                        {% assign parts = post.authors | split: 'Harry Anthony' %}
+                        <span>{{ parts[0] }}</span>
+                        <strong>Harry Anthony</strong>
+                        <span>{{ parts[1] }}</span>
+                    {% else %}
+                        {{ post.authors }}
+                    {% endif %}
+                </p>
                 <p class="post-place"> {{ post.place }} </p>
                 {% if post.comments %}   
-                    <p class="post-comments"> {{ post.comments }} </p>
+                    <p class="post-comments" style="display: flex; align-items: center;">&#x1F3C6; {{ post.comments }} </p>
+                {% else %}
+                    <p class="post-comments"></p>
                 {% endif %}
                 <p class="post-year"> {{ post.year }} </p>
                 <div class="post-paper">
