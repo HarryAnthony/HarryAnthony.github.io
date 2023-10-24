@@ -48,6 +48,26 @@ function renderPosts(checkbox_checked) {
 </script>
 
 
+
+<script>
+  function toggleButton(buttonType) {
+    var firstAuthorButton = document.querySelector('.first-author-button');
+    var contributorButton = document.querySelector('.contributor-button');
+
+    if (buttonType === 'first') {
+      firstAuthorButton.style.backgroundColor = 'turquoise';
+      contributorButton.style.backgroundColor = 'grey';
+    } else if (buttonType === 'contributor') {
+      firstAuthorButton.style.backgroundColor = 'grey';
+      contributorButton.style.backgroundColor = 'turquoise';
+    }
+  }
+</script>
+
+<button class="button first-author-button" onclick="toggleButton('first')">First Author</button>
+<button class="button contributor-button" onclick="toggleButton('contributor')">Contributor</button>
+
+
 <div class="publications-wrapper">
     {% for post in site.posts %}
         <div class="post-info" id="post{{ forloop.index }}">
