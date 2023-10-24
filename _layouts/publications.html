@@ -12,45 +12,61 @@ layout: default
 
 
 <div class="publications-wrapper">
-    <h1>Research / <a href="https://scholar.google.com/citations?hl=en&user=Qml3h9gAAAAJ">Google Scholar</a></h1>
-    
     {% for post in site.posts %}
-        <div class="post-info">
-            <img src="{{ post.image }}" alt="" />
-            <div class="post-title">
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                <p> 
-                    {% if post.authors contains 'Harry Anthony' %}
-                        {% assign parts = post.authors | split: 'Harry Anthony' %}
-                        <span>{{ parts[0] }}</span>
-                        <strong>Harry Anthony</strong>
-                        <span>{{ parts[1] }}</span>
-                    {% else %}
-                        {{ post.authors }}
+        {% if post.first_author_bool and checkbox_checked %}
+            <div class="post-info">
+                <!-- Render the content of each post -->
+                <img src="{{ post.image }}" alt="" />
+                <div class="post-title">
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    <p> {{ post.authors }} </p>
+                    <p class="post-place"> {{ post.place }} </p>
+                    {% if post.comments %}   
+                        <p class="post-comments"> {{ post.comments }} </p>
                     {% endif %}
-                </p>
-                <p class="post-place"> {{ post.place }} </p>
-                {% if post.comments %}   
-                    <p class="post-comments" style="display: flex; align-items: center;">&#x1F3C6; {{ post.comments }} </p>
-                {% else %}
-                    <p class="post-comments"></p>
-                {% endif %}
-                <p class="post-year"> {{ post.year }} </p>
-                <div class="post-paper">
-                    {% if post.paper %}   
-                        <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
-                    {% endif %}
-                    {% if post.arxiv %} 
-                        <a href="{{ post.arxiv | prepend: site.baseurl }}"><button class="rounded-button" type="button">Arxiv</button></a>
-                    {% endif %}
-                    {% if post.code %} 
-                        <a href="{{ post.code | prepend: site.baseurl }}"><button class="rounded-button" type="button">Code</button></a>
-                    {% endif %}
+                    <p class="post-year"> {{ post.year }} </p>
+                    <div class="post-paper">
+                        {% if post.paper %}   
+                            <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
+                        {% endif %}
+                        {% if post.arxiv %} 
+                            <a href="{{ post.arxiv | prepend: site.baseurl }}"><button class="rounded-button" type="button">Arxiv</button></a>
+                        {% endif %}
+                        {% if post.code %} 
+                            <a href="{{ post.code | prepend: site.baseurl }}"><button class="rounded-button" type="button">Code</button></a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-        </div>
+        {% elsif checkbox_checked == false %}
+            <div class="post-info">
+                <!-- Render the content of each post -->
+                <img src="{{ post.image }}" alt="" />
+                <div class="post-title">
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    <p> {{ post.authors }} </p>
+                    <p class="post-place"> {{ post.place }} </p>
+                    {% if post.comments %}   
+                        <p class="post-comments"> {{ post.comments }} </p>
+                    {% endif %}
+                    <p class="post-year"> {{ post.year }} </p>
+                    <div class="post-paper">
+                        {% if post.paper %}   
+                            <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
+                        {% endif %}
+                        {% if post.arxiv %} 
+                            <a href="{{ post.arxiv | prepend: site.baseurl }}"><button class="rounded-button" type="button">Arxiv</button></a>
+                        {% endif %}
+                        {% if post.code %} 
+                            <a href="{{ post.code | prepend: site.baseurl }}"><button class="rounded-button" type="button">Code</button></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
     {% endfor %}
 </div>
+
 
 
 <style>
@@ -73,3 +89,37 @@ layout: default
         background-color: #73c5b9;
     }
 </style>
+
+<script>
+function toggleAuthorFilter() {
+    var checkBox = document.getElementById("authorToggle");
+    var sliderText = document.getElementById("sliderText");
+
+    if (checkBox.checked == true){
+        sliderText.innerHTML = "First Author";
+        checkbox_checked = true;
+    } else {
+        sliderText.innerHTML = "Contribution";
+        checkbox_checked = false;
+    }
+
+    renderPosts(checkbox_checked);
+}
+
+function renderPosts(checkbox_checked) {
+    var posts = document.getElementsByClassName("post-info");
+
+    for (var i = 0; i < posts.length; i++) {
+        var post = posts[i];
+        var isAuthorPost = post.innerText.includes("First Author");
+        
+        if (checkbox_checked && isAuthorPost) {
+            post.style.display = "block";
+        } else if (!checkbox_checked) {
+            post.style.display = "block";
+        } else {
+            post.style.display = "none";
+        }
+    }
+}
+</script>
