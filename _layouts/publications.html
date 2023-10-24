@@ -13,7 +13,7 @@ layout: default
 
 <div class="publications-wrapper">
     {% for post in site.posts %}
-        {% if post.first_author_bool and checkbox_checked %}
+        {% if checkbox_checked %}
             <div class="post-info">
                 <!-- Render the content of each post -->
                 <img src="{{ post.image }}" alt="" />
