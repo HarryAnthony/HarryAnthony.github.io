@@ -53,7 +53,7 @@ function renderPosts(checkbox_checked) {
         <div class="post-info" id="post{{ forloop.index }}">
             <img src="{{ post.image }}" alt="" />
             <div class="post-title">
-                <a class="post-label" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <a href="{{ post.url | prepend: site.baseurl }}" style="font-size: 16px;">{{ post.title }}</a>
                 <p> 
                     {% if post.authors contains 'Harry Anthony' %}
                         {% assign parts = post.authors | split: 'Harry Anthony' %}
