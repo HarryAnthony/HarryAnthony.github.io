@@ -75,7 +75,7 @@ function toggleAuthorFilter() {
         checkbox_checked = false;
     }
 
-    renderPosts(checkbox.checked);
+    renderPosts(checkbox_checked);
 }
 
 function renderPosts(checkbox_checked) {
@@ -85,8 +85,8 @@ function renderPosts(checkbox_checked) {
         var post = posts[i];
         var firstAuthorBool = post.innerText.includes("post.first_author_bool: true");
 
-        if (checkbox_checked) {
-            if (post.first_author_bool) {
+        if (checkbox_checked == true) {
+            if (post.first_author_bool == true) {
                 post.style.display = "block";
             } else {
                 post.style.display = "none";
