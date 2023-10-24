@@ -2,7 +2,7 @@
 layout: post
 title:  "On the use of Mahalanobis distance for out-of-distribution detection with neural networks for medical imaging"
 place: UNSURE at MICCAI 2023
-authors: Harry Anthony & Konstantinos Kamnitsas
+authors: *Harry Anthony* & Konstantinos Kamnitsas
 date:   2023-08-01 12:00:00 +0200
 image: /images/On_the_use_of_Mahalanobis.png
 categories: out-of-distribution-detection, outlier-detection
