@@ -11,6 +11,43 @@ layout: default
 </div>
 
 
+<script>
+function toggleAuthorFilter() {
+    var checkBox = document.getElementById("authorToggle");
+    var sliderText = document.getElementById("sliderText");
+
+    if (checkBox.checked) {
+        sliderText.innerHTML = "First Author";
+        checkbox_checked = true;
+    } else {
+        sliderText.innerHTML = "Contribution";
+        checkbox_checked = false;
+    }
+
+    renderPosts(checkbox_checked);
+}
+
+function renderPosts(checkbox_checked) {
+    var posts = document.getElementsByClassName("post-info");
+
+    for (var i = 0; i < posts.length; i++) {
+        var post = posts[i];
+        var isTrue = post.innerText.includes("true");
+
+        if (checkbox_checked) {
+            if (isTrue) {
+                post.style.display = "block";
+            } else {
+                post.style.display = "none";
+            }
+        } else {
+            post.style.display = "block";
+        }
+    }
+}
+</script>
+
+
 <div class="publications-wrapper">
     {% for post in site.posts %}
         <div class="post-info" id="post{{ forloop.index }}">
@@ -61,39 +98,3 @@ layout: default
         background-color: #73c5b9;
     }
 </style>
-
-<script>
-function toggleAuthorFilter() {
-    var checkBox = document.getElementById("authorToggle");
-    var sliderText = document.getElementById("sliderText");
-
-    if (checkBox.checked) {
-        sliderText.innerHTML = "First Author";
-        checkbox_checked = true;
-    } else {
-        sliderText.innerHTML = "Contribution";
-        checkbox_checked = false;
-    }
-
-    renderPosts(checkbox_checked);
-}
-
-function renderPosts(checkbox_checked) {
-    var posts = document.getElementsByClassName("post-info");
-
-    for (var i = 0; i < posts.length; i++) {
-        var post = posts[i];
-        var isTrue = post.innerText.includes("true");
-
-        if (checkbox_checked) {
-            if (isTrue) {
-                post.style.display = "block";
-            } else {
-                post.style.display = "none";
-            }
-        } else {
-            post.style.display = "block";
-        }
-    }
-}
-</script>
