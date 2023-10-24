@@ -57,10 +57,13 @@ function renderPosts(checkbox_checked) {
     if (buttonType === 'first') {
       firstAuthorButton.style.backgroundColor = 'CadetBlue';
       contributorButton.style.backgroundColor = 'Gainsboro';
+      checkbox_checked = true;
     } else if (buttonType === 'contributor') {
       firstAuthorButton.style.backgroundColor = 'Gainsboro';
       contributorButton.style.backgroundColor = 'CadetBlue';
+      checkbox_checked = false;
     }
+  renderPosts(checkbox_checked);
   }
 </script>
 
