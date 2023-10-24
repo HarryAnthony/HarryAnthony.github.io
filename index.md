@@ -5,8 +5,9 @@
 title: Home
 layout: home
 ---
-
 ## Updates
+
+[Oct. 2023] Attended the MICCAI 2023 conference in Vancouver, Canada to present my research. Happy to announce I won the *Best Paper Award* at the UNSURE workshop at MICCAI!
 
 [Aug. 2023] I have had two papers accepted at workshops at MICCAI, I will be presenting my paper at the UNSURE workshop in October!
 
@@ -14,4 +15,3 @@ layout: home
 
 [Oct. 2022] Graduated with a First Class Physics degree from Imperial College London.
 
-[Apr. 2022] Completed a masters of thesis on the search for axions at the LHCb.
