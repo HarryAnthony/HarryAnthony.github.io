@@ -10,7 +10,7 @@ paper: https://link.springer.com/chapter/10.1007/978-3-031-44336-7_14
 arxiv:
 code: https://github.com/HarryAnthony/Mahalanobis-OOD-detection
 poster: 
-comments: :trophy: Won the best paper award at UNSURE 2023
+comments: Best Paper Award at UNSURE 2023
 year: 2023
 ---
 
