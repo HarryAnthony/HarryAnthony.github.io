@@ -13,7 +13,7 @@ layout: default
                 <p> {{ post.authors }} </p>
                 <p class="post-place"> {{ post.place }} </p>
                 {% if post.comments %}   
-                    <p class="post-comments"> {{ post.comments }} </p>
+                    <p class="post-comments"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23666666' height='16' viewBox='0 0 24 24' width='16'><path d='M0 0h24v24H0z' fill='none'/><path d='M12 2a9 9 0 1 0 9 9 9.01 9.01 0 0 0-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z'/></svg> {{ post.comments }} </p>
                 {% else %}
                     <p class="post-comments"></p>
                 {% endif %}
