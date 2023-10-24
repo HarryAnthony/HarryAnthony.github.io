@@ -32,13 +32,13 @@ function renderPosts(checkbox_checked) {
 
     for (var i = 0; i < posts.length; i++) {
         var post = posts[i];
-        var isTrue = post.innerText.includes("first_author");
+        var isTrue = post.innerText.includes(", Harry Anthony");
 
         if (checkbox_checked) {
             if (isTrue) {
-                post.style.display = "block";
-            } else {
                 post.style.display = "none";
+            } else {
+                post.style.display = "block";
             }
         } else {
             post.style.display = "block";
