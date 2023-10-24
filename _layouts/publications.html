@@ -67,7 +67,7 @@ function toggleAuthorFilter() {
     var checkBox = document.getElementById("authorToggle");
     var sliderText = document.getElementById("sliderText");
 
-    if (checkBox.checked == true){
+    if (checkBox.checked) {
         sliderText.innerHTML = "First Author";
         checkbox_checked = true;
     } else {
@@ -84,8 +84,9 @@ function renderPosts(checkbox_checked) {
     for (var i = 0; i < posts.length; i++) {
         var post = posts[i];
         var isAuthorPost = post.getElementsByTagName("p")[0].innerText.includes("First Author");
-        
-        if (checkbox_checked && isAuthorPost) {
+        var firstAuthorBool = post.innerText.includes("post.first_author_bool: true");
+
+        if (checkbox_checked && isAuthorPost && firstAuthorBool) {
             post.style.display = "block";
         } else if (!checkbox_checked) {
             post.style.display = "block";
