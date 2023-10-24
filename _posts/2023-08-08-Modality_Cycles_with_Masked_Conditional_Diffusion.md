@@ -1,5 +1,6 @@
 ---
 layout: post
+first_author_bool: true
 title:  "Modality Cycles with Masked Conditional Diffusion for Unsupervised Anomaly Segmentation in MRI"
 place: MMMI at MICCAI 2023
 authors: Ziyun Liang, Harry Anthony, Felix Wagner & Konstantinos Kamnitsas
@@ -11,8 +12,7 @@ arxiv:
 code:
 poster: 
 comments:
-year: 2023
-first_author_bool: 
+year: 2023 
 ---
 
 ![](/images/masked_modality_cycle.png)
