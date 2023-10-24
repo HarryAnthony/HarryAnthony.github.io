@@ -36,12 +36,12 @@ function renderPosts(checkbox_checked) {
 
         if (checkbox_checked) {
             if (isTrue) {
-                post.style.display = "none";
+                post.style.visibility = "visible";
             } else {
-                post.style.display = "block";
+                post.style.visibility = "hidden";
             }
         } else {
-            post.style.display = "block";
+            post.style.visibility = "visible";
         }
     }
 }
