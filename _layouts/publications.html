@@ -102,6 +102,24 @@ function toggleAuthorFilter() {
         sliderText.innerHTML = "Contribution";
         checkbox_checked = false;
     }
+
+    renderPosts(checkbox_checked);
 }
 
+function renderPosts(checkbox_checked) {
+    var posts = document.getElementsByClassName("post-info");
+
+    for (var i = 0; i < posts.length; i++) {
+        var post = posts[i];
+        var isAuthorPost = post.getElementsByTagName("p")[0].innerText.includes("First Author");
+        
+        if (checkbox_checked && isAuthorPost) {
+            post.style.display = "block";
+        } else if (!checkbox_checked) {
+            post.style.display = "block";
+        } else {
+            post.style.display = "none";
+        }
+    }
+}
 </script>
