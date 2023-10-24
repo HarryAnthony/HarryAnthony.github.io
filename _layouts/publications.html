@@ -86,7 +86,7 @@ function renderPosts(checkbox_checked) {
         var firstAuthorBool = post.innerText.includes("first_author_bool: true");
 
         if (checkbox_checked) {
-            if (post.first_author_bool) {
+            if (firstAuthorBool) {
                 post.style.display = "block";
             } else {
                 post.style.display = "none";
