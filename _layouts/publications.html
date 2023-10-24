@@ -86,13 +86,13 @@ function renderPosts(checkbox_checked) {
         var firstAuthorBool = post.innerText.includes("post.first_author_bool: true");
 
         if (checkbox_checked) {
-            if (post.first_author_bool == true) {
-                post.style.display = "none";
-            } else {
+            if (post.first_author_bool) {
                 post.style.display = "block";
+            } else {
+                post.style.display = "none";
             }
         } else {
-            post.style.display = "none";
+            post.style.display = "block";
         }
     }
 }
