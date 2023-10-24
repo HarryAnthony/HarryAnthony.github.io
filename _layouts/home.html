@@ -18,24 +18,90 @@ layout: default
 </div>
 
 
+<div class="content-wrapper">
+    {{content}}
+</div>
+
+
+
+<script>
+function renderPosts(checkbox_checked) {
+    var posts = document.getElementsByClassName("post-info");
+
+    for (var i = 0; i < posts.length; i++) {
+        var post = posts[i];
+        var isTrue = post.innerText.includes(", Harry Anthony");
+
+        if (checkbox_checked) {
+            if (isTrue) {
+                post.style.visibility = "hidden";
+            } else {
+                 post.style.visibility = "visible";
+            }
+        } else {
+            post.style.visibility = "visible";
+        }
+    }
+}
+</script>
+
+<script>
+  function toggleButton(buttonType) {
+    var firstAuthorButton = document.querySelector('.first-author-button');
+    var contributorButton = document.querySelector('.contributor-button');
+
+    if (buttonType === 'first') {
+      firstAuthorButton.style.backgroundColor = 'CadetBlue';
+      contributorButton.style.backgroundColor = 'Silver';
+      checkbox_checked = true;
+    } else if (buttonType === 'contributor') {
+      firstAuthorButton.style.backgroundColor = 'CadetBlue';
+      contributorButton.style.backgroundColor = 'CadetBlue';
+      checkbox_checked = false;
+    }
+  renderPosts(checkbox_checked);
+  }
+</script>
+
+<button class="rounded-button first-author-button" onclick="toggleButton('first')">First Author</button>
+<button class="rounded-button contributor-button" onclick="toggleButton('contributor')">Contributor</button>
+
+
 <div class="publications-wrapper">
-    <h2>Research</h2>
     {% for post in site.posts %}
-        <div class="post-info">
+        <div class="post-info" id="post{{ forloop.index }}">
             <img src="{{ post.image }}" alt="" />
             <div class="post-title">
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                <p> {{ post.authors }} </p>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="font-size: 20px;">{{ post.title }}</a>
+                <p> 
+                    {% if post.authors contains 'Harry Anthony' %}
+                        {% assign parts = post.authors | split: 'Harry Anthony' %}
+                        <span>{{ parts[0] }}</span>
+                        <strong>Harry Anthony</strong>
+                        <span>{{ parts[1] }}</span>
+                    {% else %}
+                        {{ post.authors }}
+                    {% endif %}
+                </p>
                 <p class="post-place"> {{ post.place }} </p>
+                {% if post.comments %}   
+                    <p class="post-comments" style="display: flex; align-items: center;">&#x1F3C6; {{ post.comments }} </p>
+                {% else %}
+                    <p class="post-comments"></p>
+                {% endif %}
+                <p class="post-year"> {{ post.year }} </p>
                 <div class="post-paper">
                     {% if post.paper %}   
-                        <a href="{{ post.paper | prepend: site.baseurl }}">[paper]</a>
+                        <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
                     {% endif %}
                     {% if post.arxiv %} 
-                        <a href="{{ post.arxiv | prepend: site.baseurl }}">[arxiv]</a>
+                        <a href="{{ post.arxiv | prepend: site.baseurl }}"><button class="rounded-button" type="button">Arxiv</button></a>
                     {% endif %}
                     {% if post.code %} 
-                        <a href="{{ post.code | prepend: site.baseurl }}">[code]</a>
+                        <a href="{{ post.code | prepend: site.baseurl }}"><button class="rounded-button" type="button">Code</button></a>
+                    {% endif %}
+                    {% if post.poster %} 
+                        <a href="{{ post.poster | prepend: site.baseurl }}"><button class="rounded-button" type="button">Poster</button></a>
                     {% endif %}
                 </div>
             </div>
@@ -44,10 +110,25 @@ layout: default
 </div>
 
 
-<div class="content-wrapper">
-    {{content}}
-</div>
 
+<style>
+    .rounded-button {
+        border: none;
+        border-radius: 14px;
+        padding: 7px 16px;
+        background-color: #639f95;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: BlinkMacSystemFont, Helvetica;
+        font-weight: 100;
+    }
 
-
-
+    .rounded-button:hover {
+        background-color: #73c5b9;
+    }
+</style>
