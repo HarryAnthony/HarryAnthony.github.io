@@ -5,6 +5,27 @@ layout: default
 <h1>Research - <a href="https://scholar.google.com/citations?hl=en&user=Qml3h9gAAAAJ">Google Scholar</a></h1>
 
 <script>
+function renderPosts(checkbox_checked) {
+    var posts = document.getElementsByClassName("post-info");
+
+    for (var i = 0; i < posts.length; i++) {
+        var post = posts[i];
+        var isTrue = post.innerText.includes(", Harry Anthony");
+
+        if (checkbox_checked) {
+            if (isTrue) {
+                post.style.display = "none";
+            } else {
+                post.style.display = "block";
+            }
+        } else {
+            post.style.display = "block";
+        }
+    }
+}
+</script>
+
+<script>
   function toggleButton(buttonType) {
     var firstAuthorButton = document.querySelector('.first-author-button');
     var contributorButton = document.querySelector('.contributor-button');
