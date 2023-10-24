@@ -9,7 +9,7 @@ categories: out-of-distribution-detection, outlier-detection
 paper: https://link.springer.com/chapter/10.1007/978-3-031-44336-7_14
 arxiv:
 code: https://github.com/HarryAnthony/Mahalanobis-OOD-detection
-poster: /images/On_the_use_of_Mahalanobis.png
+poster: /docs/MICCAI_Conference_poster_Harry_Anthony_2023.pdf
 comments: Best Paper Award at UNSURE 2023
 year: 2023
 ---
