@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<h1>Research / <a href="https://scholar.google.com/citations?hl=en&user=Qml3h9gAAAAJ">Google Scholar</a></h1>
+
 <div class="slider">
   <label class="switch">
     <input type="checkbox" id="authorToggle" onclick="toggleAuthorFilter()">
@@ -45,15 +47,13 @@ function renderPosts(checkbox_checked) {
 }
 </script>
 
-<h1>Research / <a href="https://scholar.google.com/citations?hl=en&user=Qml3h9gAAAAJ">Google Scholar</a></h1>
-
 
 <div class="publications-wrapper">
     {% for post in site.posts %}
         <div class="post-info" id="post{{ forloop.index }}">
             <img src="{{ post.image }}" alt="" />
             <div class="post-title">
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 <p> 
                     {% if post.authors contains 'Harry Anthony' %}
                         {% assign parts = post.authors | split: 'Harry Anthony' %}
