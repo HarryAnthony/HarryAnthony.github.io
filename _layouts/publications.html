@@ -87,12 +87,12 @@ function renderPosts(checkbox_checked) {
 
         if (checkbox_checked == true) {
             if (post.first_author_bool == true) {
-                post.style.display = "block";
-            } else {
                 post.style.display = "none";
+            } else {
+                post.style.display = "block";
             }
         } else {
-            post.style.display = "block";
+            post.style.display = "none";
         }
     }
 }
