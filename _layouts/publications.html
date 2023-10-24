@@ -11,6 +11,16 @@ layout: default
             <div class="post-title">
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 <p {% if post.authors contains 'Harry Anthony' %} style="font-weight: bold;" {% endif %}> {{ post.authors }} </p>
+                <p> 
+                    {% if post.authors contains 'Harry Anthony' %}
+                        {% assign parts = post.authors | split: 'Harry Anthony' %}
+                        <span>{{ parts[0] }}</span>
+                        <strong>Harry Anthony</strong>
+                        <span>{{ parts[1] }}</span>
+                    {% else %}
+                        {{ post.authors }}
+                    {% endif %}
+                </p>
                 <p class="post-place"> {{ post.place }} </p>
                 {% if post.comments %}   
                     <p class="post-comments" style="display: flex; align-items: center;">&#x1F3C6; {{ post.comments }} </p>
