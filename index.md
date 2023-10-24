@@ -15,7 +15,3 @@ layout: home
 [Oct. 2022] Graduated with a First Class Physics degree from Imperial College London.
 
 [Apr. 2022] Completed a masters of thesis on the search for axions at the LHCb.
-
-<a href='https://ibme.ox.ac.uk/'>
-	<img src="images/logo.jpg" alt="Logo of Oxford University" style="width:300px;height:100px;">
-</a>
