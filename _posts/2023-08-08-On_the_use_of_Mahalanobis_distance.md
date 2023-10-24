@@ -12,6 +12,7 @@ code: https://github.com/HarryAnthony/Mahalanobis-OOD-detection
 poster: 
 comments: Best Paper Award at UNSURE 2023
 year: 2023
+first_author_bool: True
 ---
 
 ![](/images/On_the_use_of_Mahalanobis.png)
