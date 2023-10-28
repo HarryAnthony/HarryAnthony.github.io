@@ -36,10 +36,12 @@ function renderPosts(checkbox_checked) {
       firstAuthorButton.style.backgroundColor = 'CadetBlue';
       contributorButton.style.backgroundColor = 'Silver';
       checkbox_checked = true;
+      firstButton.disabled = true;
     } else if (buttonType === 'contributor') {
       firstAuthorButton.style.backgroundColor = 'CadetBlue';
       contributorButton.style.backgroundColor = 'CadetBlue';
       checkbox_checked = false;
+      firstButton.disabled = false;
     }
   renderPosts(checkbox_checked);
   }
@@ -113,4 +115,8 @@ function renderPosts(checkbox_checked) {
     .rounded-button:hover {
         background-color: #73c5b9;
     }
+    .disabled {
+        cursor: not-allowed;
+    }
+
 </style>

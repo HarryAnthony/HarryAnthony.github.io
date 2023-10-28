@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-## About me
+<h1>About me</h1>
 
 Hello world! My name is Harry Anthony and I am a DPhil (PhD) student at the University of Oxford under the supervision of Professor Konstantinos Kamnitsas. As part of the IBME group, my research focuses on improving the reliability of deep neural networks in the field of medical imaging.
 
