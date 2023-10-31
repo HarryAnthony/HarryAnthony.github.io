@@ -31,10 +31,10 @@ G_{\lambda}(\mathbf{x})= \begin{cases}\text { OOD } & \text { if } \mathcal{S}(\
 
 An out-of-distribution (OOD) detection method which has gained a lot of research interest is measuing the distance of a test input to the training data in the network's latent space. The distance metric used is typically *Mahalanobis distance*. Using a feature extractor $\mathcal{F}$ (which is typically a section of the DNN), the feature maps after a module in the network can be extracted $h(\mathbf{x}) \in \mathbb{R}^{D \times D \times M}$, where the maps have size $D \times D$ with $M$ channels. The means of these feature maps can be used to define an embedding vector $\mathbf{z}(\mathbf{x}) \in \mathbb{R}^{M} = \frac{1}{D^2} \sum_D \sum_D \mathbf{h} (\mathbf{x})$. The mean $\mathbf{\mu_y}$ and covariance matrix $\Sigma_y$ of the embedding vector for each class in the training data $(\mathbf{x},y) \sim \mathcal{D}_{\text {train}}$ can then be calculated.
 
-The Mahalanobis distance $d_{\mathcal{M}_y}$ between the vector $\mathbf{z}(\mathbf{x}^\*)$ of a test data point $\mathbf{x}^\*$ and the training data of class $y$ can be calculated as a sum over M dimensions. 
-```math
+The Mahalanobis distance $d_{\mathcal{M}_y}$ between the vector $\mathbf{z}(\mathbf{x}^\*)$ of a test data point $\mathbf{x}^\*$ and the training data of class $y$ can be calculated as a sum over M dimensions.
+\[
 d_{\mathcal{M}_y}(\mathbf{x}^*) = \sum_{i=1}^M ( \mathbf{z}(\mathbf{x^*}) - \mathbf{\mu_y}) \Sigma_y^{-1}  ( \mathbf{z}(\mathbf{x^*}) - \mathbf{\mu_y})
-```
+\] 
 The Mahalanobis score is defined as the minimum Mahalanobis distance between the test data point and the class centroids of the training data, which can be used as an OOD scoring function $\mathcal{S}$.
 ```math
 \mathcal{S}_{\text {Mahal. Score}}(\mathbf{x}^*) = - \min_{y \in \mathcal{Y}} \{ d_{\mathcal{M}_y}(\mathbf{x}^*) \}
@@ -43,7 +43,7 @@ where the negative sign is used to stay consistent with the convention of having
 
 Mahalanobis score is widely used for OOD detection, but its performance is mixed in the literature. It performs well in some studies but less well in others. So we wanted to study the best practises for this method. To study this method, we tested our models on Chest X-ray images from the CheXpert dataset.
 
-![](/images/Mahalanobis_OOD_detection/workflow.png) 
+![](/images/Mahalanobis_OOD_detection/workflow.jpg) 
 
 **Figure 1**: (Left) Method to extract embeddings after a network module. (Right) Mahalanobis score $d_{\mathcal{M}}$ of an input to the closest training class centroid. Figure is from [1].
 
