@@ -23,6 +23,7 @@ When training a neural network, we have a set of training images and correspondi
 <img src="/images/OOD_detection.png" alt="" />
 
 OOD detection can be viewed as a binary classification problem, labelling an input $\mathbf{x}$ as OOD when the scoring function $\mathcal{S}(\mathbf{x},f)$ is below a threshold $\lambda$, and ID if it is above. Such a scoring function should identify if the input is from a different distribution to $\mathcal{D}_{\text {train}}$. 
+
 $$
 G_{\lambda}(\mathbf{x})= \begin{cases}\text { OOD } & \text { if } \mathcal{S}(\mathbf{x}) \leq \lambda \\ \text { ID } & \text { if } \mathcal{S}(\mathbf{x}) > \lambda \end{cases}
 $$
@@ -38,9 +39,13 @@ d_{\mathcal{M}_y}(\mathbf{x}^*) = \sum_{i=1}^M ( \mathbf{z}(\mathbf{x^*}) - \mat
 $$
  
 The Mahalanobis score is defined as the minimum Mahalanobis distance between the test data point and the class centroids of the training data, which can be used as an OOD scoring function $\mathcal{S}$.
-```math
+
+<div style="text-align:center">
+$$
 \mathcal{S}_{\text {Mahal. Score}}(\mathbf{x}^*) = - \min_{y \in \mathcal{Y}} \{ d_{\mathcal{M}_y}(\mathbf{x}^*) \}
-```
+$$
+</div>
+
 where the negative sign is used to stay consistent with the convention of having a higher scoring function for ID than OOD inputs. 
 
 Mahalanobis score is widely used for OOD detection, but its performance is mixed in the literature. It performs well in some studies but less well in others. So we wanted to study the best practises for this method. To study this method, we tested our models on Chest X-ray images from the CheXpert dataset.
