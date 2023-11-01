@@ -15,15 +15,13 @@ year: 2023
 ---
 
 <style>
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     div {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
     .container {
         flex-direction: column;
-        align-items: center;
     }
 </style>
 
