@@ -92,4 +92,4 @@ Here are some of the key findings of our analysis:
 
 Dive into our research!
 
-&#x1F4C4; Paper(https://link.springer.com/chapter/10.1007/978-3-031-44336-7_14) | &#x1F4CA; Poster(/docs/MICCAI_Conference_poster_Harry_Anthony_2023.pdf) | `</>` Code(https://github.com/HarryAnthony/Mahalanobis-OOD-detection)
+<a href="https://link.springer.com/chapter/10.1007/978-3-031-44336-7_14">&#x1F4C4; Paper</a> | <a href="/docs/MICCAI_Conference_poster_Harry_Anthony_2023.pdf">&#x1F4CA; Poster</a> | <a href="https://github.com/HarryAnthony/Mahalanobis-OOD-detection">`</>` Code</a>
