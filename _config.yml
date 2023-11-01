@@ -41,6 +41,11 @@ google_analytics: G-HD8XMF7G1E
 # minima:
 #   skin: dark
 
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - dollarmath
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
