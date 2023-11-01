@@ -62,7 +62,7 @@ a:visited {
     color: #639f95;
 }
 
-equation {
+.equation, .math {
             color: black;
         }
 
@@ -160,7 +160,7 @@ equation {
 
 .darkmode .social-media-list a:hover .username { text-decoration: underline; }
 
-.darkmode equation{
+.darkmode .equation, .darkmode .math {
             color: #eeeeee;
         }
 
