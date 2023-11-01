@@ -53,11 +53,15 @@ An out-of-distribution (OOD) detection method which has gained a lot of research
 
 The Mahalanobis distance $$d_{\mathcal{M}_y}$$ between the vector $$\mathbf{z}(\mathbf{x}^*)$$ of a test data point $$\mathbf{x}^*$$ and the training data of class $$y$$ can be calculated as a sum over $$M$$ dimensions.
 
-$$ d_{\mathcal{M}_y}(\mathbf{x}^*) = \sum_{i=1}^M ( \mathbf{z}(\mathbf{x^*}) - \mathbf{\mu_y}) \Sigma_y^{-1}  ( \mathbf{z}(\mathbf{x^*}) - \mathbf{\mu_y}) $$
- 
+<div class="equation">
+    $$ d_{\mathcal{M}_y}(\mathbf{x}^*) = \sum_{i=1}^M ( \mathbf{z}(\mathbf{x^*}) - \mathbf{\mu_y}) \Sigma_y^{-1}  ( \mathbf{z}(\mathbf{x^*}) - \mathbf{\mu_y}) $$
+</div> 
+
 The Mahalanobis score is defined as the minimum Mahalanobis distance between the test data point and the class centroids of the training data, which can be used as an OOD scoring function $$\mathcal{S}$$.
 
-$$ \mathcal{S}_{\text {Mahal. Score}}(\mathbf{x}^*) = - \min_{y \in \mathcal{Y}} \{ d_{\mathcal{M}_y}(\mathbf{x}^*) \} $$
+<div class="equation">
+    $$ \mathcal{S}_{\text {Mahal. Score}}(\mathbf{x}^*) = - \min_{y \in \mathcal{Y}} \{ d_{\mathcal{M}_y}(\mathbf{x}^*) \} $$
+</div>
 
 where the negative sign is used to stay consistent with the convention of having a higher scoring function for ID than OOD inputs. 
 
