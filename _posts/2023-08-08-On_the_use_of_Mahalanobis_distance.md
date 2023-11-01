@@ -22,6 +22,10 @@ year: 2023
     }
     .container {
         flex-direction: column;
+        align-items: left;
+    }
+    .content {
+        margin-left: 0cm;
     }
 </style>
 
