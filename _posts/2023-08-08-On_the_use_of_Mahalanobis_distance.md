@@ -27,6 +27,10 @@ year: 2023
     .content {
         margin-left: 0cm;
     }
+@media (min-width: 768px) {
+    .content {
+        margin-left: 1cm;
+    }
 </style>
 
 
@@ -34,7 +38,7 @@ year: 2023
     <div class="image" style="flex: 1;">
         <img src="/images/On_the_use_of_Mahalanobis.png" alt="Image" style="max-width:100%; height:auto;">
     </div>
-    <div class="content" style="flex: 1; margin-left: 1cm;">
+    <div class="content" style="flex: 1;">
         <h2>Defining the problem -<br> Out-of-distribution detection</h2>
         <p>When training a neural network, we have a set of training images and corresponding labels which we call the training data. We use this to train a neural network on a task of interest, such as classifying diseases from an x-ray scan. Once the model is trained, it can be applied to images without labels during inference. Most of these Images will be from the same distribution as the training data, known as in-distribution, however the model may encounter inputs which differ significantly from the training data, known as out-of-distribution.</p>
     </div>
