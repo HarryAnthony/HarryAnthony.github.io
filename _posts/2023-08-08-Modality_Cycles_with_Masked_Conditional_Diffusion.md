@@ -24,17 +24,14 @@ year: 2023
         flex-direction: column;
         align-items: left;
     }
-    .content {
-        margin-left: 0cm;
-    }
 </style>
 
 
 <div class="container" style="display: flex; align-items: center;">
-    <div class="image" style="flex: 1;">
+    <div class="image" style="flex: 1; margin-right: 1cm;">
         <img src="/images/masked_modality_cycle.png" alt="Image" style="max-width:100%; height:auto;">
     </div>
-    <div class="content" style="flex: 1; margin-left: 1cm;">
+    <div class="content" style="flex: 1;">
         <h2>Abstract</h2>
         <p>
 Unsupervised anomaly segmentation aims to detect patterns that are distinct from any patterns processed during training, commonly called abnormal or out-of-distribution patterns, without providing any associated manual segmentations. Since anomalies during deployment can lead to model failure, detecting the anomaly can enhance the reliability of models, which is valuable in high-risk domains like medical imaging. This paper introduces Masked Modality Cycles with Conditional Diffusion (MMCCD), a method that enables segmentation of anomalies across diverse patterns in multimodal MRI.</p>

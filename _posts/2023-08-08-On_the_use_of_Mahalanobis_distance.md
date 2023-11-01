@@ -24,18 +24,11 @@ year: 2023
         flex-direction: column;
         align-items: left;
     }
-    .content {
-        margin-left: 0cm;
-    }
-@media (min-width: 768px) {
-    .content {
-        margin-left: 1cm;
-    }
 </style>
 
 
 <div class="container" style="display: flex; align-items: center;">
-    <div class="image" style="flex: 1;">
+    <div class="image" style="flex: 1; margin-right: 1cm;">
         <img src="/images/On_the_use_of_Mahalanobis.png" alt="Image" style="max-width:100%; height:auto;">
     </div>
     <div class="content" style="flex: 1;">
