@@ -63,7 +63,7 @@ a:visited {
 }
 
 .equation, .math {
-            color: black;
+            color: grey;
         }
 
 .site-header { border-top: 5px solid #639f95; }
