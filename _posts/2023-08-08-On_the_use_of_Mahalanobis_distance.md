@@ -27,12 +27,12 @@ year: 2023
 
 
 <div class="container" style="display: flex; align-items: center;">
+    <div class="image" style="flex: 1; margin-left: 1cm;">
+        <img src="/images/On_the_use_of_Mahalanobis.png" alt="Image" style="max-width:100%; height:auto;">
+    </div>
     <div class="content" style="flex: 1;">
         <h2>Defining the problem -<br> Out-of-distribution detection</h2>
         <p>When training a neural network, we have a set of training images and corresponding labels which we call the training data.</p>
-    </div>
-    <div class="image" style="flex: 1; margin-left: 1cm;">
-        <img src="/images/On_the_use_of_Mahalanobis.png" alt="Image" style="max-width:100%; height:auto;">
     </div>
 </div>
 
@@ -113,6 +113,4 @@ Here are some of the key findings of our analysis:
 
 Dive into our research!
 
-- &#x1F4C4; Paper
-- &#x1F4CA; Poster
-- `</>` Code
+&#x1F4C4; Paper | &#x1F4CA; Poster | `</>` Code
