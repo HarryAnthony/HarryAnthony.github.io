@@ -14,7 +14,7 @@ comments: Best Paper Award at UNSURE 2023
 year: 2023
 ---
 
-<script>
+<style>
 @media (min-width: 768px) {
     div {
         display: flex;
@@ -25,7 +25,7 @@ year: 2023
         flex-direction: column;
         align-items: center;
     }
-</script>
+</style>
 
 
 <div class="container" style="display: flex; align-items: center;">
