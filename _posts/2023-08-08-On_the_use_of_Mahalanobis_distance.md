@@ -21,8 +21,7 @@ year: 2023
         flex-direction: column;
         align-items: center;
     }
-    .content {
-        display: flex;
+    .container {
         flex-direction: column;
         align-items: center;
     }
