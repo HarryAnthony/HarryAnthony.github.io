@@ -27,32 +27,11 @@ year: 2023
 
 
 <div class="container" style="display: flex; align-items: center;">
-    <div class="image" style="flex: 1; margin-left: 1cm;">
+    <div class="image" style="flex: 1;">
         <img src="/images/On_the_use_of_Mahalanobis.png" alt="Image" style="max-width:100%; height:auto;">
     </div>
-    <div class="content" style="flex: 1;">
+    <div class="content" style="flex: 1; margin-left: 1cm;">
         <h2>Defining the problem -<br> Out-of-distribution detection</h2>
-        <p>When training a neural network, we have a set of training images and corresponding labels which we call the training data.</p>
-    </div>
-</div>
-
-
-<div style="display: flex; align-items: center;">
-    <div style="flex: 1;">
-        <img src="/images/On_the_use_of_Mahalanobis.png" alt="Image" style="max-width:100%; height:auto; margin-right: 1cm;">
-    </div>
-    <div style="flex: 1; margin-left: 1cm;">
-        <h2>Defining the problem -<br> Out-of-distribution detection</h2>
-        <p>When training a neural network, we have a set of training images and corresponding labels which we call the training data.</p>
-    </div>
-</div>
-
-<div style="display: flex; align-items: center;">
-    <div style="flex: 1;">
-        <img src="/images/On_the_use_of_Mahalanobis.png" alt="Image" style="max-width:100%; height:auto; margin-right: 1cm;">
-    </div>
-    <div style="flex: 1; margin-left: 1cm;">
-        <h2>Defining the problem - <br> Out-of-distribution detection</h2>
         <p>When training a neural network, we have a set of training images and corresponding labels which we call the training data. We use this to train a neural network on a task of interest, such as classifying diseases from an x-ray scan. Once the model is trained, it can be applied to images without labels during inference. Most of these Images will be from the same distribution as the training data, known as in-distribution, however the model may encounter inputs which differ significantly from the training data, known as out-of-distribution.</p>
     </div>
 </div>
@@ -113,4 +92,4 @@ Here are some of the key findings of our analysis:
 
 Dive into our research!
 
-&#x1F4C4; Paper | &#x1F4CA; Poster | `</>` Code
+&#x1F4C4; Paper(https://link.springer.com/chapter/10.1007/978-3-031-44336-7_14) | &#x1F4CA; Poster(/docs/MICCAI_Conference_poster_Harry_Anthony_2023.pdf) | `</>` Code(https://github.com/HarryAnthony/Mahalanobis-OOD-detection)
