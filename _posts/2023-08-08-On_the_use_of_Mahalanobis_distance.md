@@ -43,7 +43,9 @@ Neural networks cannot be expected to give sensible predictions on OOD inputs, s
 
 OOD detection can be viewed as a binary classification problem, labelling an input $$\mathbf{x}$$ as OOD when the scoring function $$\mathcal{S}(\mathbf{x},f)$$ is below a threshold $$\lambda$$, and ID if it is above. Such a scoring function should identify if the input is from a different distribution to $$\mathcal{D}_{\text {train}}$$. 
 
-$$ G_{\lambda}(\mathbf{x})= \begin{cases}\text { OOD } & \text { if } \mathcal{S}(\mathbf{x}) \leq \lambda \\ \text { ID } & \text { if } \mathcal{S}(\mathbf{x}) > \lambda \end{cases} $$
+<div class="equation">
+    $$ G_{\lambda}(\mathbf{x})= \begin{cases}\text { OOD } & \text { if } \mathcal{S}(\mathbf{x}) \leq \lambda \\ \text { ID } & \text { if } \mathcal{S}(\mathbf{x}) > \lambda \end{cases} $$
+</div>
 
 ## Method - Mahalanobis distance for OOD detection
 
