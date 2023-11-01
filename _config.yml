@@ -33,6 +33,7 @@ picture: https://raw.githubusercontent.com/HarryAnthony/harryanthony.github.io/m
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-mathjax2
 
 # Google Analytics
 google_analytics: G-HD8XMF7G1E
