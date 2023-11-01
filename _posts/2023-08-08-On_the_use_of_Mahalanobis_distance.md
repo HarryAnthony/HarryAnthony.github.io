@@ -15,36 +15,20 @@ year: 2023
 ---
 
 <script>
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media (min-width: 20px) {
-    .container {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .content {
-        margin-right: 1cm;
-        flex: 1;
-    }
-
-    .image {
-        flex: 1;
+@media (max-width: 768px) {
+    div {
+        flex-direction: column;
     }
 }
 </script>
 
-<div class="container">
-    <div class="content">
+<div style="display: flex; align-items: center;">
+    <div style="flex: 1;">
+        <img src="/images/On_the_use_of_Mahalanobis.png" alt="Image" style="max-width:100%; height:auto; margin-right: 1cm;">
+    </div>
+    <div style="flex: 1; margin-left: 1cm;">
         <h2>Defining the problem -<br> Out-of-distribution detection</h2>
         <p>When training a neural network, we have a set of training images and corresponding labels which we call the training data.</p>
-    </div>
-    <div class="image">
-        <img src="/images/On_the_use_of_Mahalanobis.png" alt="Image" style="max-width:100%; height:auto;">
     </div>
 </div>
 
