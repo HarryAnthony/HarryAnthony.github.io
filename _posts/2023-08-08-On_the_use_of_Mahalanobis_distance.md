@@ -21,7 +21,7 @@ year: 2023
     align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 20px) {
     .container {
         flex-direction: row;
         justify-content: center;
