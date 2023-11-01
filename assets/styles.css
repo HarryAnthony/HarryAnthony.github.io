@@ -160,8 +160,8 @@ a:visited {
 
 .darkmode .social-media-list a:hover .username { text-decoration: underline; }
 
-.darkmode .equation{
-            color: white;
+.darkmode equation{
+            color: #eeeeee;
         }
 
 /** Blockquotes */
