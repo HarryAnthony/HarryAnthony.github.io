@@ -15,7 +15,7 @@ year: 2023
 ---
 
 <script>
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     div {
         display: flex;
         flex-direction: column;
