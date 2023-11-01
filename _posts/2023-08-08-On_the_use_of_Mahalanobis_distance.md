@@ -32,7 +32,7 @@ $$
 
 An out-of-distribution (OOD) detection method which has gained a lot of research interest is measuing the distance of a test input to the training data in the network's latent space. The distance metric used is typically *Mahalanobis distance*. Using a feature extractor $$\mathcal{F}$$ (which is typically a section of the DNN), the feature maps after a module in the network can be extracted $$h(\mathbf{x}) \in \mathbb{R}^{D \times D \times M}$$, where the maps have size $$D \times D$$ with $$M$$ channels. The means of these feature maps can be used to define an embedding vector $$\mathbf{z}(\mathbf{x}) \in \mathbb{R}^{M} = \frac{1}{D^2} \sum_D \sum_D \mathbf{h} (\mathbf{x})$$. The mean $$\mathbf{\mu_y}$$ and covariance matrix $$\Sigma_y$$ of the embedding vector for each class in the training data $$(\mathbf{x},y) \sim \mathcal{D}_{\text {train}}$$ can then be calculated.
 
-The Mahalanobis distance $$d_{\mathcal{M}_y}$$ between the vector $$\mathbf{z}(\mathbf{x}^\*)$$ of a test data point $$\mathbf{x}^\*$$ and the training data of class $$y$$ can be calculated as a sum over $$M$$ dimensions.
+The Mahalanobis distance $$d_{\mathcal{M}_y}$$ between the vector $$\mathbf{z}(\mathbf{x}^*)$$ of a test data point $$\mathbf{x}^*$$ and the training data of class $$y$$ can be calculated as a sum over $$M$$ dimensions.
 
 $$
 d_{\mathcal{M}_y}(\mathbf{x}^*) = \sum_{i=1}^M ( \mathbf{z}(\mathbf{x^*}) - \mathbf{\mu_y}) \Sigma_y^{-1}  ( \mathbf{z}(\mathbf{x^*}) - \mathbf{\mu_y})
@@ -72,4 +72,4 @@ Here are some of the key findings of our analysis:
 * We demonstrate that using multiple detectors at different depths of the network (for detecting different types of OOD patterns) can improve upon OOD detection.
 * This motivates future work on design and calibration of multi-detector systems for OOD.
 
-If this interests you, dive into our research:
+Dive into our research!
