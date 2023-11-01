@@ -80,6 +80,6 @@ Here are some of the key findings of our analysis:
 
 Dive into our research!
 
-- U+1F4C4 Paper
-- U+1F4CA Poster
+- &#x1F4C4; Paper
+- &#x1F4CA; Poster
 - `</>` Code
