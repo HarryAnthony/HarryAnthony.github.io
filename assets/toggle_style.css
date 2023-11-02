@@ -43,8 +43,7 @@ label {
     font-weight: 500;
     font-family: BlinkMacSystemFont, Helvetica;
     top: 7px;
-    right: 20px;
-
+    right: 40px;
 }
 
 .btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
