@@ -54,29 +54,6 @@ function renderPosts(checkbox_checked) {
 </script>
 
 
-<script>
-  function toggleButton(buttonType) {
-    var firstAuthorButton = document.querySelector('.first-author-button');
-    var contributorButton = document.querySelector('.contributor-button');
-
-    if (buttonType === 'first') {
-      firstAuthorButton.style.backgroundColor = 'CadetBlue';
-      contributorButton.style.backgroundColor = 'Silver';
-      checkbox_checked = true;
-      firstAuthorButton.disabled = true;
-    } else if (buttonType === 'contributor') {
-      firstAuthorButton.style.backgroundColor = 'CadetBlue';
-      contributorButton.style.backgroundColor = 'CadetBlue';
-      checkbox_checked = false;
-      firstAuthorButton.disabled = false;
-    }
-  renderPosts(checkbox_checked);
-  }
-</script>
-
-<button class="rounded-button first-author-button" onclick="toggleButton('first')">First Author</button>
-<button class="rounded-button contributor-button" onclick="toggleButton('contributor')">Contributor</button>
-
 
 <div class="publications-wrapper">
     {% for post in site.posts %}
