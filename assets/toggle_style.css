@@ -64,7 +64,7 @@ label {
     display: none;
     background: #FF9800;
     border: none;
-    color: #fff;
+    color: #424242;
 }
 
 .btn-color-mode-switch input[type="checkbox"]{
@@ -80,7 +80,7 @@ label {
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
     background: #E0E0E0;
-    color: #fff;
+    color: #424242;
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
@@ -97,7 +97,7 @@ label {
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
     /*background: #639f95; */
-    /*color: #fff;*/
+    /*color: #424242;*/
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{
