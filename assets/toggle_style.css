@@ -108,7 +108,6 @@ label {
 
 /*mode preview*/
 .dark-preview{
-    background: #fff;
 }
 
 .dark-preview div.btn-container i.fa-sun-o{
@@ -121,7 +120,6 @@ label {
 }
 
 .white-preview{
-    background: #fff;
 }
 
 .white-preview div.btn-container i.fa-sun-o{
