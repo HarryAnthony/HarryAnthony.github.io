@@ -13,7 +13,7 @@ div.btn-container i{
 label {
     font-size: 15px;
     color: #fff;
-    font-weight: 500;
+    font-weight: 200;
     font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
 }
 
@@ -40,7 +40,7 @@ label {
     content: attr(data-on);
     position: absolute;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 200;
     color: #424242;
     font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
     top: 7px;
