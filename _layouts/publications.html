@@ -71,20 +71,20 @@ function renderPosts(checkbox_checked) {
         <div class="post-info" id="post{{ forloop.index }}">
             <div class="image" style="flex: 1; margin-right: 1cm;">
                 <img src="{{ post.image }}" alt="" />
-                    <div class="post-paper">
-                        {% if post.paper %}   
-                            <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
-                        {% endif %}
-                        {% if post.arxiv %} 
-                            <a href="{{ post.arxiv | prepend: site.baseurl }}"><button class="rounded-button" type="button">Arxiv</button></a>
-                        {% endif %}
-                        {% if post.code %} 
-                            <a href="{{ post.code | prepend: site.baseurl }}"><button class="rounded-button" type="button">Code</button></a>
-                        {% endif %}
-                        {% if post.poster %} 
-                            <a href="{{ post.poster | prepend: site.baseurl }}"><button class="rounded-button" type="button">Poster</button></a>
-                        {% endif %}
-                    </div>
+                <div class="post-paper">
+                    {% if post.paper %}   
+                        <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
+                    {% endif %}
+                    {% if post.arxiv %} 
+                        <a href="{{ post.arxiv | prepend: site.baseurl }}"><button class="rounded-button" type="button">Arxiv</button></a>
+                    {% endif %}
+                    {% if post.code %} 
+                        <a href="{{ post.code | prepend: site.baseurl }}"><button class="rounded-button" type="button">Code</button></a>
+                    {% endif %}
+                    {% if post.poster %} 
+                        <a href="{{ post.poster | prepend: site.baseurl }}"><button class="rounded-button" type="button">Poster</button></a>
+                    {% endif %}
+                </div>
             </div>
             <div class="content" style="flex: 1;">
                 <div class="post-title">
