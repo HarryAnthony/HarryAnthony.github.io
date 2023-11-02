@@ -8,6 +8,40 @@ layout: default
     }
 </style>
 
+<style>
+@media (max-width: 768px) {
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        flex-direction: column;
+        align-items: left;
+    }
+</style>
+
+
+<div class="container" style="display: flex; align-items: center;">
+    <div class="image" style="flex: 1; margin-right: 1cm;">
+        <img src="/images/photo.png" alt="Image" style="max-width:100%; height:auto;">
+    </div>
+    <div class="content" style="flex: 1;">
+        <p>Hello world! My name is Harry Anthony and I am a DPhil student at the <a href="https://www.ox.ac.uk/">University of Oxford</a>. As part of the <a href="https://ibme.ox.ac.uk/">IBME group</a>, my research focuses on improving the reliability of deep neural networks in the field of medical imaging, with a particular emphasis on Out-of-distribution (OOD) detection. OOD detection is critical for ensuring the accuracy and safety of medical imaging systems, as it helps to identify when input data differs from its training data. Through my research, I aim to develop novel methods for deep learning algorithms to detect OOD inputs and improve the overall performance of medical imaging systems. Prior to my doctoral studies, I obtained a first class master's degree in Physics from Imperial College London.</p>
+    </div>
+    <p id="bio-social">
+        <a href="mailto:harry.anthony@eng.ox.ac.uk"><script src="https://cdn.lordicon.com/ritcuqlt.js"></script><lord-icon
+    src="https://cdn.lordicon.com/tkgyrmwc.json"
+    trigger="hover"
+    style="width:20px;height:20px"></lord-icon>Email</a> / 
+        <a href="https://github.com/HarryAnthony"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg>GitHub</a> /
+        <a href="https://www.twitter.com/HarryEJAnthony"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg>Twitter</a> / 
+        <a href="https://www.linkedin.com/in/harry-a-859b1a107/"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg>LinkedIn</a> /
+        <a href="https://scholar.google.com/citations?hl=en&user=Qml3h9gAAAAJ"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#google_scholar"></use></svg>Google Scholar</a> /
+        <a href="https://orcid.org/0009-0004-1252-7448" item="sameAs"><i class="ai ai-orcid-square ai-fw icon-grey"></i>ORCID</a> /
+        <a href="https://www.researchgate.net/profile/Harry-Anthony" item="sameAs"><i class="ai ai-researchgate-square ai-fw icon-grey"></i>ResearchGate</a>
+    </p>
+</div>
+
 <div class="bio-wrapper">
     <img src="/images/photo.png" alt="" />
     <p>{{ site.description }} </p>
