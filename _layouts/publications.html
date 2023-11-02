@@ -6,6 +6,19 @@ layout: default
 
 <p> Below is a collection of my publications, along with their corresponding code, posters and other materials. If you would like to discuss this research with me, please feel free to contact me through my email <a href="mailto:harry.anthony@eng.ox.ac.uk">harry.anthony@eng.ox.ac.uk</a>. </p>
 
+
+<div class="btn-container">
+      <label class="switch btn-color-mode-switch">
+            <input type="checkbox" name="color_mode" id="color_mode" value="1">
+            <label for="color_mode" data-on="Dark" data-off="Light" class="btn-color-mode-switch-inner"></label>
+        </label>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/assets/toggle.js"></script>
+
+
 <script>
 function renderPosts(checkbox_checked) {
     var posts = document.getElementsByClassName("post-info");
