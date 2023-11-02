@@ -93,7 +93,7 @@ label {
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
     content: attr(data-off);
     right: auto;
-    left: 20px;
+    left: 40px;
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
