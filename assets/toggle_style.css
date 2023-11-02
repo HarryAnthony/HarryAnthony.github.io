@@ -12,7 +12,7 @@ div.btn-container i{
 
 label {
     font-size: 15px;
-    color: #424242;
+    color: #fff;
     font-weight: 500;
     font-family: BlinkMacSystemFont, Helvetica;
 }
@@ -41,6 +41,7 @@ label {
     position: absolute;
     font-size: 15px;
     font-weight: 500;
+    color: #424242;
     font-family: BlinkMacSystemFont, Helvetica;
     top: 7px;
     right: 40px;
