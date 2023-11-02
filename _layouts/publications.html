@@ -19,10 +19,10 @@ function updateVariable() {
     var isToggled = document.getElementById('color_mode').checked;
     if (isToggled) {
         document.body.classList.add('dark-preview');
-        renderPosts(false);
+        renderPosts(true);
     } else {
         document.body.classList.remove('dark-preview');
-        renderPosts(true);
+        renderPosts(false);
     }
 }
 </script>
