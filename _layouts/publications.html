@@ -69,9 +69,9 @@ function renderPosts(checkbox_checked) {
 <div class="container" style="display: block; float: inline-end; align-items: center;">
     {% for post in site.posts %}
         <div class="post-info" id="post{{ forloop.index }}">
-            <div class="image" style="flex: 1; margin-right: 1cm;">
-                <img src="{{ post.image }}" alt="" />
-                <div class="post-paper">
+            <div class="image" style="flex: 1; max-width: 33.33%;">
+                <img src="{{ post.image }}" alt="" style="width: 100%;" />
+                <div class="post-paper" style="display: flex; flex-direction: column;">
                     {% if post.paper %}   
                         <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
                     {% endif %}
@@ -86,7 +86,7 @@ function renderPosts(checkbox_checked) {
                     {% endif %}
                 </div>
             </div>
-            <div class="content" style="flex: 1;">
+            <div class="content" style="flex: 2; max-width: 66.66%;" >
                 <div class="post-title">
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="font-size: 20px;">{{ post.title }}</a>
                     <p> 
