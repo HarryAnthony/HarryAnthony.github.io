@@ -71,10 +71,12 @@ function renderPosts(checkbox_checked) {
   }
 </script>
 
-<h2>Spotlight Research</h2>
+<div class='first_author_options'>
+    <h2>Spotlight Research</h2>
 
-<button class="rounded-button first-author-button" onclick="toggleButton('first')">First Author</button>
-<button class="rounded-button contributor-button" onclick="toggleButton('contributor')">Contributor</button>
+    <button class="rounded-button first-author-button" onclick="toggleButton('first')">First Author</button>
+    <button class="rounded-button contributor-button" onclick="toggleButton('contributor')">Contributor</button>
+</div>
 
 
 <div class="publications-wrapper">
@@ -146,6 +148,15 @@ function renderPosts(checkbox_checked) {
     .disabled {
         cursor: not-allowed;
     }
+
+
+    .first_author_options {
+        position: relative; /* or use 'static' if that fits your needs better */
+        /* You can adjust the top, left, right, or bottom properties as needed */
+        /* For example, to ensure it stays below any previous content, use 'top' to add some space */
+        top: 50px; 
+    }
+
 </style>
 
 
