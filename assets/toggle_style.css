@@ -11,9 +11,10 @@ div.btn-container i{
 }
 
 label {
-    font-size: 13px;
+    font-size: 15px;
     color: #424242;
     font-weight: 500;
+    font-family: BlinkMacSystemFont, Helvetica;
 }
 
 .btn-color-mode-switch{
@@ -38,17 +39,18 @@ label {
 .btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
     content: attr(data-on);
     position: absolute;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 500;
+    font-family: BlinkMacSystemFont, Helvetica;
     top: 7px;
-    right: 20px;
+    right: 10px;
 
 }
 
 .btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
     content: attr(data-off);
     width: 140px;
-    height: 30px;
+    height: 29px;
     background: #639f95;
     border-radius: 52px;
     position: absolute;
