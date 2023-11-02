@@ -71,7 +71,7 @@ function renderPosts(checkbox_checked) {
         <div class="post-info" id="post{{ forloop.index }}">
             <div class="image" style="flex: 1; max-width: 33.33%;">
                 <img src="{{ post.image }}" alt="" style="width: 100%;" />
-                <div class="post-paper" style="display: flex; flex-direction: column;">
+                <div class="post-paper" style="display: flex; flex-direction: column; align-items: center;">
                     {% if post.paper %}   
                         <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
                     {% endif %}
