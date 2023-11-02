@@ -79,14 +79,14 @@ label {
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
-    background: #151515;
+    background: #639f95;
     color: #fff;
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
     content: attr(data-on);
     left: 68px;
-    background: #3c3c3c;
+    background: #639f95;
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
