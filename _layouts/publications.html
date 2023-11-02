@@ -14,6 +14,22 @@ layout: default
         </label>
 </div>
 
+<script>
+    // Function to update the variable and trigger renderPosts based on the toggle switch
+    function updateVariable() {
+        var isToggled = document.getElementById('color_mode').checked;
+        if (isToggled) {
+            // Add the class 'dark-preview' to the body when the toggle is checked
+            document.body.classList.add('dark-preview');
+            renderPosts(false);
+        } else {
+            // Remove the class 'dark-preview' from the body when the toggle is unchecked
+            document.body.classList.remove('dark-preview');
+            renderPosts(true);
+        }
+    }
+</script>
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="/assets/toggle.js"></script>
@@ -132,12 +148,5 @@ function renderPosts(checkbox_checked) {
     .disabled {
         cursor: not-allowed;
     }
-
-    .dark-preview{
-    background: #639f95;
-    renderPosts(false);
-    }
-
    
-
 </style>
