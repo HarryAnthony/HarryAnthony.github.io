@@ -96,7 +96,7 @@ label {
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
-    /*background: #66BB6A; */
+    /*background: #639f95; */
     /*color: #fff;*/
 }
 
@@ -106,7 +106,7 @@ label {
 
 /*mode preview*/
 .dark-preview{
-    background: #0d0d0d;
+    background: #639f95;
 }
 
 .dark-preview div.btn-container i.fa-sun-o{
