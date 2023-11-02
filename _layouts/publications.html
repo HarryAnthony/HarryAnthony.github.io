@@ -9,25 +9,22 @@ layout: default
 
 <div class="btn-container">
       <label class="switch btn-color-mode-switch">
-            <input type="checkbox" name="color_mode" id="color_mode" value="1">
+            <input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="updateVariable()">
             <label for="color_mode" data-on="First Author" data-off="Contributor" class="btn-color-mode-switch-inner"></label>
         </label>
 </div>
 
 <script>
-    // Function to update the variable and trigger renderPosts based on the toggle switch
-    function updateVariable() {
-        var isToggled = document.getElementById('color_mode').checked;
-        if (isToggled) {
-            // Add the class 'dark-preview' to the body when the toggle is checked
-            document.body.classList.add('dark-preview');
-            renderPosts(false);
-        } else {
-            // Remove the class 'dark-preview' from the body when the toggle is unchecked
-            document.body.classList.remove('dark-preview');
-            renderPosts(true);
-        }
+function updateVariable() {
+    var isToggled = document.getElementById('color_mode').checked;
+    if (isToggled) {
+        document.body.classList.add('dark-preview');
+        renderPosts(false);
+    } else {
+        document.body.classList.remove('dark-preview');
+        renderPosts(true);
     }
+}
 </script>
 
 
