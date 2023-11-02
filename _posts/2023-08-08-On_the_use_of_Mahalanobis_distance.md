@@ -16,10 +16,6 @@ year: 2023
 
 <style>
 @media (max-width: 768px) {
-    div {
-        display: flex;
-        flex-direction: column;
-    }
     .container {
         flex-direction: column;
         align-items: left;
