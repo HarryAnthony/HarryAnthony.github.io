@@ -66,30 +66,31 @@ function renderPosts(checkbox_checked) {
 </script>
 
 <script>
-  function toggleButton(buttonType) {
-    var firstAuthorButton = document.querySelector('.first-author-button');
-    var contributorButton = document.querySelector('.contributor-button');
-
-    if (buttonType === 'first') {
-      firstAuthorButton.style.backgroundColor = 'CadetBlue';
-      contributorButton.style.backgroundColor = 'Silver';
-      checkbox_checked = true;
-      firstAuthorButton.disabled = true;
-    } else if (buttonType === 'contributor') {
-      firstAuthorButton.style.backgroundColor = 'CadetBlue';
-      contributorButton.style.backgroundColor = 'CadetBlue';
-      checkbox_checked = false;
-      firstAuthorButton.disabled = false;
+function updateVariable() {
+    var isToggled = document.getElementById('color_mode').checked;
+    if (isToggled) {
+        document.body.classList.add('dark-preview');
+        renderPosts(true);
+    } else {
+        document.body.classList.remove('dark-preview');
+        renderPosts(false);
     }
-  renderPosts(checkbox_checked);
-  }
+}
 </script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/assets/toggle.js"></script>
 
 <div class='first_author_options'>
     <h2>Spotlight Research</h2>
 
-    <button class="rounded-button first-author-button" onclick="toggleButton('first')">First Author</button>
-    <button class="rounded-button contributor-button" onclick="toggleButton('contributor')">Contributor</button>
+    <div class="btn-container">
+        <label class="switch btn-color-mode-switch">
+            <input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="updateVariable()">
+            <label for="color_mode" data-on="First Author" data-off="Contributor" class="btn-color-mode-switch-inner"></label>
+        </label>   
+    </div>
 </div>
 
 
@@ -152,8 +153,8 @@ function renderPosts(checkbox_checked) {
         font-size: 14px;
         margin: 4px 2px;
         cursor: pointer;
-        font-family: BlinkMacSystemFont, Helvetica;
-        font-weight: 100;
+        font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+        font-weight: 200;
     }
 
     .rounded-button:hover {
