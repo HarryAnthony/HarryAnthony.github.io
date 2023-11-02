@@ -14,7 +14,7 @@ label {
     font-size: 15px;
     color: #fff;
     font-weight: 500;
-    font-family: BlinkMacSystemFont, Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
 }
 
 .btn-color-mode-switch{
@@ -42,7 +42,7 @@ label {
     font-size: 15px;
     font-weight: 500;
     color: #424242;
-    font-family: BlinkMacSystemFont, Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
     top: 7px;
     right: 40px;
 }
