@@ -46,7 +46,7 @@ body {
 
 .post-title p {font-size: small;}
 
-.post-link { position: static; float: left; margin-right: 2em; margin-top: 1px;  margin-bottom: 1em; font-size: large;}
+.post-link { position: static; float: left; margin-right: 2em; margin-top: 0px;  margin-bottom: 1em; font-size: large;}
 
 .post-info img { float: left; width: 180px; height: 180px; margin-right: 2em;}
 
