@@ -66,7 +66,7 @@ function renderPosts(checkbox_checked) {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* Adjust the height as needed */
+        height: 5vh; /* Adjust the height as needed */
     }
     .center img {
         max-width: 100%;
@@ -82,7 +82,6 @@ function renderPosts(checkbox_checked) {
             <div class="center">
                 <img src="{{ post.image }}">
             </div>
-            <img src="{{ post.image }}" alt="" />
             <div class="post-title">
                 
                 <a href="{{ post.url | prepend: site.baseurl }}" style="font-size: 20px;"> <h3> {{ post.title }} </h3> </a>
