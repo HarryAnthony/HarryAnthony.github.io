@@ -62,12 +62,12 @@ function renderPosts(checkbox_checked) {
         flex-direction: column;
         align-items: left;
     }
-    .center {
+    .centered_im {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .center img {
+    .centered_im img {
         max-width: 100%;
         max-height: 100%;
     }
@@ -78,11 +78,10 @@ function renderPosts(checkbox_checked) {
 <div class="publications-wrapper">
     {% for post in site.posts %}
         <div class="post-info" id="post{{ forloop.index }}">
-            <div class="center">
+            <div class="centered_im">
                 <img src="{{ post.image }}" alt="">
             </div>
-            <div class="post-title">
-                
+            <div class="post-title">    
                 <a href="{{ post.url | prepend: site.baseurl }}" style="font-size: 20px;"> <h3> {{ post.title }} </h3> </a>
                 <p> 
                     {% if post.authors contains 'Harry Anthony' %}
@@ -111,7 +110,7 @@ function renderPosts(checkbox_checked) {
                         <a href="{{ post.code | prepend: site.baseurl }}"><button class="rounded-button" type="button">Code</button></a>
                     {% endif %}
                     {% if post.poster %} 
-                        <a href="{{ post.poster | prepend: site.baseurl }}"><button class="rounded-button" type="button">Poster</button></a>
+                     <a href="{{ post.poster | prepend: site.baseurl }}"><button class="rounded-button" type="button">Poster</button></a>
                     {% endif %}
                 </div>
             </div>
