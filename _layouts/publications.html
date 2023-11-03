@@ -89,7 +89,6 @@ function renderPosts(checkbox_checked) {
                 {% else %}
                     <p class="post-comments"></p>
                 {% endif %}
-                <p class="post-year"> {{ post.year }} </p>
                 <div class="post-paper">
                     {% if post.paper %}   
                         <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
