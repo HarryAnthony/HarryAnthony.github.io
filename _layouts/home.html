@@ -54,16 +54,17 @@ function renderPosts(checkbox_checked) {
 
         if (checkbox_checked) {
             if (isTrue) {
-                post.style.visibility = "hidden";
+                post.style.display = "none";
             } else {
-                 post.style.visibility = "visible";
+                 post.style.display = "block";
             }
         } else {
-            post.style.visibility = "visible";
+            post.style.display = "block";
         }
     }
 }
 </script>
+
 
 <script>
 function updateVariable() {
@@ -76,6 +77,13 @@ function updateVariable() {
         renderPosts(false);
     }
 }
+</script>
+
+<script>
+window.onload = function() {
+  updateVariable();
+  updateVariable();
+};
 </script>
 
 
@@ -94,12 +102,31 @@ function updateVariable() {
 </div>
 
 
+<style>
+@media (max-width: 768px) {
+    .publications-wrapper {
+        flex-direction: column;
+        align-items: left;
+    }
+    .centered_im {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .centered_im img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+</style>
+
 <div class="publications-wrapper">
     {% for post in site.posts %}
         <div class="post-info" id="post{{ forloop.index }}">
-            <img src="{{ post.image }}" alt="" />
-            <div class="post-title">
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="font-size: 20px;">{{ post.title }}</a>
+            <div class="centered_im" style = "margin-right: 1cm;">
+                <img src="{{ post.image }}" alt="">
+            </div>
+            <div class="post-title">    
+                <a href="{{ post.url | prepend: site.baseurl }}" style="font-size: 20px;"> <h3> {{ post.title }} </h3> </a>
                 <p> 
                     {% if post.authors contains 'Harry Anthony' %}
                         {% assign parts = post.authors | split: 'Harry Anthony' %}
@@ -116,7 +143,6 @@ function updateVariable() {
                 {% else %}
                     <p class="post-comments"></p>
                 {% endif %}
-                <p class="post-year"> {{ post.year }} </p>
                 <div class="post-paper">
                     {% if post.paper %}   
                         <a href="{{ post.paper | prepend: site.baseurl }}"><button class="rounded-button" type="button">Paper</button></a>
@@ -128,15 +154,13 @@ function updateVariable() {
                         <a href="{{ post.code | prepend: site.baseurl }}"><button class="rounded-button" type="button">Code</button></a>
                     {% endif %}
                     {% if post.poster %} 
-                        <a href="{{ post.poster | prepend: site.baseurl }}"><button class="rounded-button" type="button">Poster</button></a>
+                     <a href="{{ post.poster | prepend: site.baseurl }}"><button class="rounded-button" type="button">Poster</button></a>
                     {% endif %}
                 </div>
             </div>
         </div>
     {% endfor %}
-
-<a href='https://ibme.ox.ac.uk/'> <img src="images/logo.jpg" alt="Logo of Oxford University" style="width:300px;height:100px;"></a>
-
+    <a href='https://ibme.ox.ac.uk/'> <img src="images/logo.jpg" alt="Logo of Oxford University" style="width:300px;height:100px;"></a>
 </div>
 
 
