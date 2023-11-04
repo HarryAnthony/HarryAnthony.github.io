@@ -28,7 +28,7 @@ year: 2022
         <img src="/images/searching_for_dark_matter.png" alt="Image" style="max-width:100%; height:auto;">
     </div>
     <div class="content" style="flex: 1;">
-        <h2>Searching for new particles at the LHCb experiment</h2>
+        <h2>Beyond the Standard Model</h2>
         <p>A huge ambition for particle physicists is to create a mathematical framework that can describe all the basic constituents of matter and the forces that act between them. Our modern understanding of particle physics is currently best described by the Standard Model. The Standard Model has proven to be remarkably accurate, matching almost all experimental measurements to a very high accuracy for over 50 years.</p>
     </div>
 </div>
@@ -44,6 +44,8 @@ In theoretical models, ALPs can interact with another particle, the W± boson, w
 Experimental results allow us to block out areas of this map, known as exclusion regions, where an ALP could not be. However, there are still large areas of the parameter space which have not been explored yet, in particular the area of heavy ALPs.
 
 How would we explore this region? Physicists believe we could find an ALP by studying rare decays of B mesons (mesons containing a beauty quark). One particular B meson decay shows promise for finding ALPs. During this decay, a W± boson is produced, which quickly decays into an ALP. These ALPs then decay into two photons, which can be detected. This decay allows us to study heavy ALPs, enabling us to study the unexplored parameter space.
+
+<h2>Finding a needle in a haystack</h2>
 
 The results were produced using data from the LHCb experiment, one of the four major particle detectors at the Large Hadron Collider, which is specifically designed to study B meson decays. CERN’s Large Hadron Collider is the most energetic particle accelerator in the World, which creates particles by smashing protons together at speeds very close to the speed of light. This produces billions of particles at the detector, which makes finding a particular decay in a sea of other particles like finding a needle in a haystack.
 
