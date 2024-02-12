@@ -7,6 +7,8 @@ layout: home
 ---
 ## Updates
 
+[Jan. 2024] I have been elected as the PR Officer for the MICCAI Student Board 2024! I will be producing social media content to help contribute to the growth and inclusivity of the community!
+
 [Oct. 2023] Attended the MICCAI 2023 conference in Vancouver, Canada to present my research. Happy to announce I won the *Best Paper Award* at the UNSURE workshop at MICCAI!
 
 [Aug. 2023] I have had two papers accepted at workshops at MICCAI, I will be presenting my paper at the UNSURE workshop in October!
