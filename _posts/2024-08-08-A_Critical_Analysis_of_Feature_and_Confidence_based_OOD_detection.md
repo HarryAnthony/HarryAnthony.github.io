@@ -29,23 +29,21 @@ year: 2024
     </div>
     <div class="content" style="flex: 1;">
         <h2> Out-of-distribution detection <br> and Failure Detection </h2>
-        <p>Consider the setting that we are training a Deep Neural Network (DNN) for medical image classification, such as diagnosing skin lesion images. We have a set of images and corresponding labels that makes up my training data. Once the model is trained, it can be applied to images not seen during training.  </p>
+        <p>Consider the setting that we are training a Deep Neural Network (DNN) for medical image classification, such as diagnosing skin lesion images. We have a set of images and corresponding labels that makes up my training data. Once the model is trained, it can be applied to images not seen during training. If the image is from the same distribution as the training data, we call it in-distribution (ID). However, if the image is significantly different from the training data, we call it out-of-distribution (OOD). We see that DNN predictions on OOD data are both unpredictable and unreliable, which motivates the field of out-of-distribution detection - which aims to detect predictions made on OOD data and discard them to improve trustworthiness in the model's predictions. </p>
     </div>
 </div>
-
-If the image is from the same distribution as the training data, we call it in-distribution (ID). However, if the image is significantly different from the training data, we call it out-of-distribution (OOD). We see that DNN predictions on OOD data are both unpredictable and unreliable, which motivates the field of out-of-distribution detection - which aims to detect predictions made on OOD data and discard them to improve trustworthiness in the model's predictions.
 
 We analysed post-hoc (which use the parameters or outputs of a pre-trained model) out-of-distribution methods, which we grouped into two groups:
 * Confidence-based methods: Which use the model's output layer for OOD detection.
 * Feature-based methods: Which use the model's hidden layer data for OOD detection. 
 
-<img src="/images/Critical_analysis_OOD/2.jpeg" alt="" />
+<img src="/images/Critical_analysis_OOD/2.jpg" alt="" />
 
 We evaluated the OOD detection methods on unseen images for 2 criteria:
 * OOD Detection: Can the method determine if an input comes from a distribution different from the training data, and consequently discard the model's prediction for this image?
 * Failure Detection: Can the method determine if the model will give an incorrect diagnosis for the input, and consequently discard the model's prediction for this image?
 
-<img src="/images/Critical_analysis_OOD/3.jpeg" alt="" />
+<img src="/images/Critical_analysis_OOD/3.jpg" alt="" />
 
 To study these methods, we created 2 NEW out-of-distribution detection benchmarks:
 * D7P (skin lesion dataset): images without rulers are used as training and in-distribution (ID) test data, while images containing rulers are used as out-of-distribution (OOD) test cases
@@ -59,7 +57,7 @@ Studying the results, we see that:
 * Feature-based methods outperform confidence-based methods at Out-of-distribution Detection.
 
 
-<img src="/images/Critical_analysis_OOD/5.jpeg" alt="" />
+<img src="/images/Critical_analysis_OOD/5.jpg" alt="" />
 
 But why do these trends occur? To study this, we created counterfactual data by synthetically removing the OOD artefact from each OOD image in our benchmarks. We did this using intra-image interpolation, where we use a patch from the same image. These counterfactual images are available on my GitHub repository if you would like to use them in your own research, where you can find more details on how this data was made.
 
@@ -75,12 +73,12 @@ We then studied the counterfactual datasets, looking at the model predictions bo
 * Correct only with artefact
 * Incorrect only with artefact.
 
-<img src="/images/Critical_analysis_OOD/8.jpeg" alt="" />
+<img src="/images/Critical_analysis_OOD/8.jpg" alt="" />
 
 
 We can then study what happens when we apply OOD detection methods. We study both a confidence-based method (MCP) and a feature-based method (Mahalanobis Score). We first calculate the scoring function for each test image, we then apply a threshold at the 75 percentile of the held-out ID data, and discard all diagnoses below the threshold. Looking at the results, we see that the strengths of one method, is the weakness of another. This motivates us to combine BOTH a confidence-based method and a feature-based method to mitigate against their weaknesses. We see that combining these methods results in more trustworthy predictions, but with a higher dismissal rate.
 
-<img src="/images/Critical_analysis_OOD/9.jpeg" alt="" />
+<img src="/images/Critical_analysis_OOD/9.jpg" alt="" />
 
 Dive into our research!
 
