@@ -10,6 +10,7 @@ paper: https://link.springer.com/chapter/10.1007/978-3-031-73158-7_15
 arxiv:
 code: https://github.com/HarryAnthony/Evaluating_OOD_detection
 poster: /docs/MICCAI_Conference_poster_Harry_Anthony_2024.pdf
+presentation: https://youtu.be/aLJhQsk4IDY?feature=shared
 comments:
 year: 2024
 ---

@@ -116,6 +116,9 @@ function renderPosts(checkbox_checked) {
                     {% if post.poster %} 
                      <a href="{{ post.poster | prepend: site.baseurl }}"><button class="rounded-button" type="button">Poster</button></a>
                     {% endif %}
+                    {% if post.presentation %} 
+                     <a href="{{ post.presentation | prepend: site.baseurl }}"><button class="rounded-button" type="button">Presentation</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>

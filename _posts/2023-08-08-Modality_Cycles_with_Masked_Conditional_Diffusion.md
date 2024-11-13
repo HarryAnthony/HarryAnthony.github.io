@@ -11,6 +11,7 @@ arxiv:
 code: https://github.com/ZiyunLiang/MMCCD
 poster: /docs/MICCAI_Conference_poster_Ziyun_Liang_2023.jpg
 comments:
+presentation:
 year: 2023 
 ---
 
