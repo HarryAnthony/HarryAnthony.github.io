@@ -25,12 +25,12 @@ layout: default
 
 <style>
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: left;
-    }
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 </style>
-
 
 <div class="container" style="display: flex; align-items: center;">
     <div class="image" style="flex: 1; margin-right: 1cm;">
@@ -115,30 +115,32 @@ window.onload = function() {
     <h2>Spotlight Research</h2>
 
     <div class="btn-container">
-        <label class="switch btn-color-mode-switch">
-            <input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="updateVariable()">
-            <label for="color_mode" data-on="First Author" data-off="Contributor" class="btn-color-mode-switch-inner"></label>
-        </label>   
+	<div class="switch btn-color-mode-switch">
+  		<input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="updateVariable()">
+  		<label for="color_mode" data-on="First Author" data-off="Contributor" class="btn-color-mode-switch-inner"></label>
+	</div>
     </div>
 </div>
 
 
 <style>
 @media (max-width: 768px) {
-    .publications-wrapper {
-        flex-direction: column;
-        align-items: left;
-    }
-    .centered_im {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .centered_im img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+  .publications-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .centered_im {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .centered_im img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
 </style>
+
 
 <div class="publications-wrapper">
     {% for post in site.posts %}
@@ -362,7 +364,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <a href='https://ibme.ox.ac.uk/'> <img src="images/logo.jpg" alt="Logo of Oxford University" style="width:300px;height:100px;"></a>
 
-
-</style>
 
 
