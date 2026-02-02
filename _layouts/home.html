@@ -8,6 +8,20 @@ layout: default
     }
 </style>
 
+.section {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.section-inner {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.section-grey {
+  background-color: #DCDCDC;
+}
+
 <style>
 @media (max-width: 768px) {
     .container {
@@ -41,9 +55,13 @@ layout: default
 </p>
 
 
+<div class="section section-grey">
+
 <div class="content-wrapper">
     {{content}}
 </div>
+</div>
+
 
 
 <script>
@@ -202,6 +220,8 @@ window.onload = function() {
 
 <!-- ================= CAROUSEL ================= -->
 
+<div class="section section-grey">
+
 <h2>Research Presentations & Talks</h2>
 
 <p> A collection of my previous research presentation. </p>
@@ -236,6 +256,7 @@ window.onload = function() {
   </div>
 
   <button class="carousel-btn next" type="button" aria-label="Next">❯</button>
+</div>
 </div>
 
 <!-- ================= CSS ================= -->
