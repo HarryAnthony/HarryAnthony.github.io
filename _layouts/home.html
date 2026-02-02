@@ -199,6 +199,78 @@ window.onload = function() {
         top: 60px; 
     }
 
+<script>
+const track = document.querySelector(".carousel-track");
+const slides = document.querySelectorAll(".carousel img");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let index = 0;
+const INTERVAL = 7000; // 7 seconds
+
+function updateCarousel() {
+  const width = slides[0].clientWidth;
+  track.style.transform = `translateX(-${index * width}px)`;
+}
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  updateCarousel();
+}
+
+function prevSlide() {
+  index = (index - 1 + slides.length) % slides.length;
+  updateCarousel();
+}
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+// Auto scroll
+let autoScroll = setInterval(nextSlide, INTERVAL);
+
+// Reset timer if user interacts
+function resetTimer() {
+  clearInterval(autoScroll);
+  autoScroll = setInterval(nextSlide, INTERVAL);
+}
+
+nextBtn.addEventListener("click", resetTimer);
+prevBtn.addEventListener("click", resetTimer);
+
+// Handle resize
+window.addEventListener("resize", updateCarousel);
+</script>
+
+<div class="carousel">
+  <button class="prev">❮</button>
+
+  <div class="carousel-track">
+    <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
+      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+    </a>
+
+    <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
+      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+    </a>
+
+    <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
+      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+    </a>
+
+    <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
+      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+    </a>
+
+    <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
+      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+    </a>
+  </div>
+
+  <button class="next">❯</button>
+</div>
+
+
 </style>
 
 
