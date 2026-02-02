@@ -6,7 +6,7 @@ authors: Wentian Xu, Ziyun Liang, Harry Anthony, Yasin Ibrahim, Felix Cohen, Gua
 date:   2026-01-01 12:00:00 +0200
 image: /images/Interactive_segmentation.png
 categories: out-of-distribution-detection
-paper:
+paper: https://arxiv.org/pdf/2503.06717
 arxiv:
 code: 
 poster:

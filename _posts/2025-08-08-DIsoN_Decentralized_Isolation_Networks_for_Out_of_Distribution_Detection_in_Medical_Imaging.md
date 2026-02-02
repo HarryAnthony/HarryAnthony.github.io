@@ -9,7 +9,7 @@ categories: out-of-distribution-detection
 paper: https://neurips.cc/virtual/2025/loc/san-diego/poster/115312
 arxiv:
 code: https://github.com/FelixWag/DIsoN/tree/main
-poster: /docs/Neurips_2025_poster.pdf
+poster: /docs/Neurips_2025_poster.png
 presentation:
 comments:
 year: 2025
