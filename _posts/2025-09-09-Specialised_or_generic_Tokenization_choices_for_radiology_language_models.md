@@ -4,7 +4,7 @@ title: "Specialised or generic? Tokenisation choices for radiology language mode
 place: ELAMI at MICCAI 2025
 authors: Hermione Warr, Wentian Xu, Harry Anthony, Yasin Ibrahim, Daniel R McGowan & Konstantinos Kamnitsas
 date:   2025-09-01 12:00:00 +0200
-image: /images/LLM_Tokenisation.png
+image: /images/LLM_tokenisation.png
 categories: out-of-distribution-detection
 paper: https://link.springer.com/chapter/10.1007/978-3-032-07502-4_8
 arxiv:
@@ -26,7 +26,7 @@ year: 2025
 
 <div class="container" style="display: flex; align-items: center;">
     <div class="image" style="flex: 1; margin-right: 1cm;">
-        <img src="/images/LLM_Tokenisation.png" alt="Image" style="max-width:100%; height:auto;">
+        <img src="/images/LLM_tokenisation.png" alt="Image" style="max-width:100%; height:auto;">
     </div>
     <div class="content" style="flex: 1;">
         <h2> Tokenisation choice for Language Models </h2>

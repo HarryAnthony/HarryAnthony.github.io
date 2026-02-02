@@ -12,7 +12,7 @@ code:
 poster:
 presentation:
 comments:
-year: 2025
+year: 2026
 ---
 
 <style>
