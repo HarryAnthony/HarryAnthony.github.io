@@ -205,24 +205,25 @@ window.onload = function() {
   <button class="prev">❮</button>
 
   <div class="carousel-track">
+    <h2>Research Presentations</h2>
     <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
-      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+      <img src="/images/Youtube_thumbnails/1.jpg" alt="Google">
     </a>
 
     <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
-      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+      <img src="/images/Youtube_thumbnails/2.jpg" alt="Google">
     </a>
 
     <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
-      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+      <img src="/images/Youtube_thumbnails/3.jpg" alt="Google">
     </a>
 
     <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
-      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+      <img src="/images/Youtube_thumbnails/4.jpg" alt="Google">
     </a>
 
     <a href="https://youtu.be/aLJhQsk4IDY?si=98vpcjJ6ostbCDAl" target="_blank">
-      <img src="/images/Yotube_thumbnails/Critical analysis.jpg" alt="Google">
+      <img src="/images/Youtube_thumbnails/5.jpg" alt="Google">
     </a>
   </div>
 
@@ -231,15 +232,15 @@ window.onload = function() {
 
 <script>
 const track = document.querySelector(".carousel-track");
-const slides = document.querySelectorAll(".carousel img");
+const slides = document.querySelectorAll(".carousel-track a"); // or ".carousel img"
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
 
 let index = 0;
-const INTERVAL = 7000; // 7 seconds
+const INTERVAL = 7000;
 
 function updateCarousel() {
-  const width = slides[0].clientWidth;
+  const width = slides[0].clientWidth;  // width of each slide
   track.style.transform = `translateX(-${index * width}px)`;
 }
 
@@ -253,23 +254,20 @@ function prevSlide() {
   updateCarousel();
 }
 
-nextBtn.addEventListener("click", nextSlide);
-prevBtn.addEventListener("click", prevSlide);
+nextBtn.addEventListener("click", () => { nextSlide(); resetTimer(); });
+prevBtn.addEventListener("click", () => { prevSlide(); resetTimer(); });
 
-// Auto scroll
 let autoScroll = setInterval(nextSlide, INTERVAL);
 
-// Reset timer if user interacts
 function resetTimer() {
   clearInterval(autoScroll);
   autoScroll = setInterval(nextSlide, INTERVAL);
 }
 
-nextBtn.addEventListener("click", resetTimer);
-prevBtn.addEventListener("click", resetTimer);
-
-// Handle resize
 window.addEventListener("resize", updateCarousel);
+
+// run once at start
+updateCarousel();
 </script>
 
 
