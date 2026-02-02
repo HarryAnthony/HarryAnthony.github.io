@@ -38,7 +38,5 @@ We introduce the Isolation Network, an OOD detection framework that quantifies t
 
 Dive into our research!
 
-<img src="/images/Critical_analysis_OOD/Paper_summary.gif" alt="" />
-
 <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/115312
-">&#x1F4C4; Paper</a> | <a href="/docs/Neurips_2025_poster.pdf">&#x1F4CA; Poster</a> | <a href="https://github.com/FelixWag/DIsoN/tree/main">`</>` Code</a>
+">&#x1F4C4; Paper</a> | <a href="/docs/Neurips_2025_poster.png">&#x1F4CA; Poster</a> | <a href="https://github.com/FelixWag/DIsoN/tree/main">`</>` Code</a>
