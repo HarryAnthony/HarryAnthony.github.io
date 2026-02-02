@@ -198,6 +198,7 @@ window.onload = function() {
         position: static;
         top: 60px; 
     }
+</style>
 
 
 <h2>Research Presentations</h2>
@@ -230,43 +231,52 @@ window.onload = function() {
 </div>
 
 <script>
-const track = document.querySelector(".carousel-track");
-const slides = document.querySelectorAll(".carousel-track a"); // or ".carousel img"
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const slides = document.querySelectorAll(".carousel-track a");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
 
-let index = 0;
-const INTERVAL = 7000;
+  if (!track || slides.length === 0 || !nextBtn || !prevBtn) {
+    console.error("Carousel elements not found. Check HTML/class names.");
+    return;
+  }
 
-function updateCarousel() {
-  const width = slides[0].clientWidth;  // width of each slide
-  track.style.transform = `translateX(-${index * width}px)`;
-}
+  let index = 0;
+  const INTERVAL = 7000;
+  let autoScroll;
 
-function nextSlide() {
-  index = (index + 1) % slides.length;
-  updateCarousel();
-}
+  function updateCarousel() {
+    const width = slides[0].clientWidth;
+    track.style.transform = `translateX(-${index * width}px)`;
+  }
 
-function prevSlide() {
-  index = (index - 1 + slides.length) % slides.length;
-  updateCarousel();
-}
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  }
 
-nextBtn.addEventListener("click", () => { nextSlide(); resetTimer(); });
-prevBtn.addEventListener("click", () => { prevSlide(); resetTimer(); });
+  function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  }
 
-let autoScroll = setInterval(nextSlide, INTERVAL);
+  function resetTimer() {
+    clearInterval(autoScroll);
+    autoScroll = setInterval(nextSlide, INTERVAL);
+  }
 
-function resetTimer() {
-  clearInterval(autoScroll);
-  autoScroll = setInterval(nextSlide, INTERVAL);
-}
+  nextBtn.addEventListener("click", () => { nextSlide(); resetTimer(); });
+  prevBtn.addEventListener("click", () => { prevSlide(); resetTimer(); });
 
-window.addEventListener("resize", updateCarousel);
+  window.addEventListener("resize", updateCarousel);
 
-// run once at start
-updateCarousel();
+  // Wait until images load so widths are correct
+  window.addEventListener("load", () => {
+    updateCarousel();
+    resetTimer();
+  });
+});
 </script>
 
 
