@@ -329,6 +329,14 @@ window.onload = function() {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.querySelector("#research-carousel");
+  if (!carousel) return;
+
+  // Prevent double-initialization
+  if (carousel.dataset.initialized === "true") return;
+  carousel.dataset.initialized = "true";
+
+  console.log("Carousel init", Date.now());
+
   const viewport = carousel.querySelector(".carousel-viewport");
   const track = carousel.querySelector(".carousel-track");
   const slides = carousel.querySelectorAll(".carousel-slide");
@@ -336,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = carousel.querySelector(".prev");
 
   let index = 0;
-  const INTERVAL = 7000; // 7 seconds
+  const INTERVAL = 7000;
   let timer;
 
   const slideWidth = () => viewport.clientWidth;
@@ -345,7 +353,6 @@ document.addEventListener("DOMContentLoaded", () => {
     index = (i + slides.length) % slides.length;
     track.style.transform = `translateX(-${index * slideWidth()}px)`;
   }
-
   function next() { goTo(index + 1); }
   function prev() { goTo(index - 1); }
 
