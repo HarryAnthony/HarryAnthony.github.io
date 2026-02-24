@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Invisible Gorilla Effect in Out-of-distribution Detection"
+title: "The Invisible Gorilla Effect in Out-of-distribution Detection for Deep Neural Networks"
 place: CVPR 2026
 authors: Harry Anthony, Ziyun Liang, Hermione Warr & Konstantinos Kamnitsas
 date:   2026-02-01 12:00:00 +0200
@@ -26,7 +26,7 @@ year: 2026
 
 <div class="container" style="display: flex; align-items: center;">
     <div class="image" style="flex: 1; margin-right: 1cm;">
-        <img src="/images/Invisible_Gorilla.png" alt="Image" style="max-width:100%; height:auto;">
+        <img src="/images/Invisible_gorilla.png" alt="Image" style="max-width:100%; height:auto;">
     </div>
     <div class="content" style="flex: 1;">
         <h2> Abstract </h2>

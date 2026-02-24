@@ -7,6 +7,8 @@ layout: home
 ---
 ## Updates
 
+[Feb. 2026] I'm excited to share that I had a paper accepted at CVPR 2026. I will be in Denver this June to present this work!
+
 [Jan. 2026] I'm excited to share that I had a paper accepted at ICLR 2026.
 
 [Aug. 2025] I’m excited to share that I had two papers accepted - one at NeurIPS 2025 and one at ELAMI (MICCAI 2025).
