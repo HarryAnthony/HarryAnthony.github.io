@@ -7,6 +7,8 @@ layout: home
 ---
 ## Updates
 
+[May 2026] I'm excited to share that my paper was accepted as a CVPR Highlight (top 1-3% of submissions)!
+
 [Feb. 2026] I'm excited to share that I had a paper accepted at CVPR 2026. I will be in Denver this June to present this work!
 
 [Jan. 2026] I'm excited to share that I had a paper accepted at ICLR 2026.
@@ -19,5 +21,5 @@ layout: home
 
 [Oct. 2024] I attended the MICCAI 2024 conference in Marrakesh to present my work at the UNSURE workshop with a long oral presentation!
 
-[Apr. 2024] I was invited as a guest on the [MICCAI Student Board Webinar Series](https://www.youtube.com/watch?v=rOmXBIWOcg8), where I took part in a panel discussion on MICCAI reviews, rebuttals, workshop papers and challenges.
+
 

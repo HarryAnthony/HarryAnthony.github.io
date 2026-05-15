@@ -8,10 +8,10 @@ image: /images/Invisible_gorilla.png
 categories: out-of-distribution-detection
 paper: https://arxiv.org/pdf/2602.20068v1
 arxiv:
-code: 
-poster:
-presentation:
-comments:
+code: https://github.com/HarryAnthony/Invisible_Gorilla_Effect
+poster: /docs/CVPR_conference_poster_Harry_Anthony_2026.pdf
+presentation: https://www.youtube.com/watch?v=DkVL_twut9M
+comments: CVPR Highlight Award
 year: 2026
 ---
 

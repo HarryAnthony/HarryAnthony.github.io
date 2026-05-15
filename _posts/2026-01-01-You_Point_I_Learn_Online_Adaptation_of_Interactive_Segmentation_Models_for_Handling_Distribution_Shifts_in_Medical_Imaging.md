@@ -9,7 +9,7 @@ categories: out-of-distribution-detection
 paper: https://arxiv.org/pdf/2503.06717
 arxiv:
 code: 
-poster:
+poster: /docs/ICLR_conference_poster_Wentian_Xu_2026.pdf
 presentation:
 comments:
 year: 2026
